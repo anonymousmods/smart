@@ -1269,16 +1269,16 @@ scroll.setBackgroundDrawable(new ColorDrawable(Color.BLUE));
 bckclrbtn.setBackgroundDrawable(new ColorDrawable(Color.BLUE));
 settingsbtn.setBackgroundDrawable(new ColorDrawable(Color.BLUE));
 gmsettingsbtn.setBackgroundDrawable(new ColorDrawable(Color.BLUE));
-setred.setBackgroundDrawable(new ColorDrawable(Color.BLUE));
-setblue.setBackgroundDrawable(new ColorDrawable(Color.BLUE));
-setcyan.setBackgroundDrawable(new ColorDrawable(Color.BLUE));
-setwhite.setBackgroundDrawable(new ColorDrawable(Color.BLUE));
-setblack.setBackgroundDrawable(new ColorDrawable(Color.BLUE));
-setorange.setBackgroundDrawable(new ColorDrawable(Color.BLUE));
-setgreen.setBackgroundDrawable(new ColorDrawable(Color.BLUE));
-setyellow.setBackgroundDrawable(new ColorDrawable(Color.BLUE));
-setmagenta.setBackgroundDrawable(new ColorDrawable(Color.BLUE));
-setpink.setBackgroundDrawable(new ColorDrawable(Color.BLUE));
+red.setBackgroundDrawable(new ColorDrawable(Color.BLUE));
+blue.setBackgroundDrawable(new ColorDrawable(Color.BLUE));
+cyan.setBackgroundDrawable(new ColorDrawable(Color.BLUE));
+white.setBackgroundDrawable(new ColorDrawable(Color.BLUE));
+black.setBackgroundDrawable(new ColorDrawable(Color.BLUE));
+orange.setBackgroundDrawable(new ColorDrawable(Color.BLUE));
+green.setBackgroundDrawable(new ColorDrawable(Color.BLUE));
+yellow.setBackgroundDrawable(new ColorDrawable(Color.BLUE));
+magenta.setBackgroundDrawable(new ColorDrawable(Color.BLUE));
+pink.setBackgroundDrawable(new ColorDrawable(Color.BLUE));
 
 }catch(e){
                 
@@ -1348,16 +1348,16 @@ scroll.setBackgroundDrawable(new ColorDrawable(Color.WHITE));
 bckclrbtn.setBackgroundDrawable(new ColorDrawable(Color.WHITE));
 settingsbtn.setBackgroundDrawable(new ColorDrawable(Color.WHITE));
 gmsettingsbtn.setBackgroundDrawable(new ColorDrawable(Color.WHITE));
-setred.setBackgroundDrawable(new ColorDrawable(Color.WHITE));
-setblue.setBackgroundDrawable(new ColorDrawable(Color.WHITE));
-setcyan.setBackgroundDrawable(new ColorDrawable(Color.WHITE));
-setwhite.setBackgroundDrawable(new ColorDrawable(Color.WHITE));
-setblack.setBackgroundDrawable(new ColorDrawable(Color.WHITE));
-setorange.setBackgroundDrawable(new ColorDrawable(Color.WHITE));
-setgreen.setBackgroundDrawable(new ColorDrawable(Color.WHITE));
-setyellow.setBackgroundDrawable(new ColorDrawable(Color.WHITE));
-setmagenta.setBackgroundDrawable(new ColorDrawable(Color.WHITE));
-setpink.setBackgroundDrawable(new ColorDrawable(Color.WHITE));
+red.setBackgroundDrawable(new ColorDrawable(Color.WHITE));
+blue.setBackgroundDrawable(new ColorDrawable(Color.WHITE));
+cyan.setBackgroundDrawable(new ColorDrawable(Color.WHITE));
+white.setBackgroundDrawable(new ColorDrawable(Color.WHITE));
+black.setBackgroundDrawable(new ColorDrawable(Color.WHITE));
+orange.setBackgroundDrawable(new ColorDrawable(Color.WHITE));
+green.setBackgroundDrawable(new ColorDrawable(Color.WHITE));
+yellow.setBackgroundDrawable(new ColorDrawable(Color.WHITE));
+magenta.setBackgroundDrawable(new ColorDrawable(Color.WHITE));
+pink.setBackgroundDrawable(new ColorDrawable(Color.WHITE));
 
 }catch(e){
                 
