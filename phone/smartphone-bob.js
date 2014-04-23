@@ -64,7 +64,7 @@ var layout = new LinearLayout(ctx);
 
 ModPE.setItem(511,"record_strad",0,"Phone");
 
-Item.addCraftRecipe(511, 1, 0, [265,2,0, 153,1,0, 331,5,0]);
+Item.addCraftRecipe(511, 1, 0, [265,2,0, 339,1,0, 331,5,0]);
 
 function createModPEDir(){
 
@@ -264,7 +264,7 @@ dialog.dismiss();
 
 settings.setOnClickListener(new View.OnClickListener(){
 onClick: function(){
-gamesettings()
+settings2()
 dialog.dismiss();
 }
 });
@@ -370,6 +370,81 @@ print("Cannot open window: "+err+".")
 }}));
 }
 
+function settings2(){
+var gmsettingsbtn = new Button(ctx);
+var settingsbtn = new Button(ctx);
+var settings2la = new LinearLayout(ctx);
+var settings2di = new Dialog(ctx);
+
+gmsettingsbtn.setText("Game Settings");
+settingsbtn.setText("Phone Settings");
+
+settingsla.setOrientation(LinearLayout.VERTICAL);
+
+settings2la.addView(gmsettingsbtn);
+settings2la.addView(settingsbtn);
+
+settings2di.setContentView(settings2la);
+
+settings2di.show()
+
+gmsettingsbtn.setOnClickListener(new View.OnClickListener(){
+onClick: function(){
+gamesettings()
+}
+});
+
+settingsbtn.setOnClickListener(new View.OnClickListener(){
+onClick: funtion(){
+phonesettings()
+}             
+});
+
+}
+
+function phonesettings(){
+
+ctx.runOnUiThread(new Runnable(){
+run:function(){
+
+try{
+                
+var bckcolor = new Button(ctx);
+var phnstla = new LinearLayout(ctx);
+var phnstdi = new Dialog(ctx);
+
+phnstla.setOrientation(LinearLayout.VERTICAL);
+
+phnstla.addView(bckcolor);
+
+phnstdi.setContentView(phnstla);
+
+phnstdi.show()
+
+bckcolor.setOnClickListener(new View.OnClickListener(){
+                
+onClick: function(){
+                
+dialog.getContentPane().setBackground(Color.red);
+screen.getContentPane().setBackground(Color.red);
+pplshow.getContentPane().setBackground(Color.red);
+stdi.getContentPane().setBackground(Color.red);
+phnstdi.getContentPane().setBackground(Color.red);
+camdi.getContentPane().setBackground(Color.red);
+               
+}
+                
+});
+
+}catch(e){
+                
+}              
+
+}
+});
+
+}
+
 function gamesettings(){
 
 ctx.runOnUiThread(new Runnable(){
@@ -383,6 +458,7 @@ var dn = new Button(ctx);
 var sprint = new Button(ctx);
 var heal = new Button(ctx);
 var tmi = new Button(ctx);
+var entmngr = new Button(ctx);
 var scroll = new ScrollView(ctx);
 var close = new Button(ctx);
 
@@ -395,6 +471,7 @@ stla.addView(dn);
 stla.addView(sprint);
 stla.addView(heal);
 stla.addView(tmi);
+stla.addView(entmngr);
 stla.addView(close);
 
 gm.setWidth(LinearLayout.LayoutParams.WRAP_CONTENT);
@@ -411,6 +488,9 @@ heal.setHeight(LinearLayout.LayoutParams.WRAP_CONTENT);
 
 tmi.setWidth(LinearLayout.LayoutParams.WRAP_CONTENT);
 tmi.setHeight(LinearLayout.LayoutParams.WRAP_CONTENT);
+
+entmngr.setWidth(LinearLayout.LayoutParams.WRAP_CONTENT);
+entmngr.setHeight(LinearLayout.LayoutParams.WRAP_CONTENT);
 
 close.setWidth(LinearLayout.LayoutParams.WRAP_CONTENT);
 close.setHeight(LinearLayout.LayoutParams.WRAP_CONTENT);
@@ -445,6 +525,8 @@ sprint.setText("Sprint On");
 heal.setText("Heal");
 
 tmi.setText("Too many items");
+
+entmngr.setText("Entity Manager");
 
 close.setText("Close");
 
@@ -502,19 +584,25 @@ stdi.dismiss();
 });
 }
 
-heal.setOnClickListener(new View.OnClickListener({
+heal.setOnClickListener(new View.OnClickListener(){
 onClick: function() {
 Player.setHealth(20);
 stdi.dismiss();
 clientMessage("Fully Healed");
 }
-}));
+});
 
 tmi.setOnClickListener(new View.OnClickListener(){
 onClick: function(){
 tmion()
 stdi.dismiss();
 }
+});
+
+entmngr.setOnClickListener(new View.OnClickListener(){
+onClick: function(){
+stdi.dismiss();  
+}             
 });
 
 close.setOnClickListener(new View.OnClickListener(){
