@@ -571,7 +571,7 @@ camdi.show()
 
 selfie.setOnClickListener(new View.OnClickListener(){
 onClick: function(){
-takeselfie()
+//takeselfie()
 clientMessage("Now click with the phone on the blocks in Third Person View to take selfies");
 camdi.dismiss();
 }
@@ -598,6 +598,16 @@ print("Error: " + e);
 
 }
 
+function attackHook(attacker, victim){
+if(getCarriedItem()==280 && victim==Entity.getRenderType(victim)==3){
+personname = Entity.getNameTag(victim);
+person = victim;
+prsnx = Entity.getX(victim);
+prsny = Entity.getY(victim);
+prsnz = Entity.getZ(victim);
+}
+}
+
 function peopleon(){
 
 ctx.runOnUiThread(new Runnable(){
@@ -621,15 +631,11 @@ pplshow.setTitle("People You Know");
 pplshow.setContentView(scroll);
 pplshow.show()
 
-if(Player.isPlayer(Player.getEntity())){
-person = Player.getEntity();
-personname = Player.getName(person);
-prsnx = Player.getX();
-prsny = Player.getY()
-prsnz = Player.getZ();
+if(Player.isPlayer(person)){
+pplfrm.addView(persontag);
 }
 
-persontag.setText("" + personname);
+persontag.setText("" + Server.getAllPlayerNames());
 close.setText("Close");
 
 persontag.setOnClickListener(new View.OnClickListener(){
