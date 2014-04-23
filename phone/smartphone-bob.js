@@ -530,16 +530,16 @@ bckgdla.setOrientation(LinearLayout.VERTICAL);
 
 scroll.addView(bckgdla);
 
-bckgdla.addView(setred);
-bckgdla.addView(setblue);
-bckgdla.addView(setwhite);
-bckgdla.addView(setblack);
-bckgdla.addView(setgreen);
-bckgdla.addView(setcyan);
-bckgdla.addView(setorange);
-bckgdla.addView(setyellow);
-bckgdla.addView(setmagenta);
-bckgdla.addView(setpink);
+bckgdla.addView(red);
+bckgdla.addView(blue);
+bckgdla.addView(white);
+bckgdla.addView(black);
+bckgdla.addView(green);
+bckgdla.addView(cyan);
+bckgdla.addView(orange);
+bckgdla.addView(yellow);
+bckgdla.addView(magenta);
+bckgdla.addView(pink);
 
 red.setText("Red");
 blue.setText("Blue");
