@@ -430,6 +430,8 @@ bckclrbtn.setText("Change Background Color");
 
 phnstla.setOrientation(LinearLayout.VERTICAL);
 
+phnstla.addView(bckclrbtn);
+
 phnstdi.setContentView(phnstla);
 phnstdi.setTitle("Phone Settings");
 
