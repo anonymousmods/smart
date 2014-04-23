@@ -256,7 +256,7 @@ dialog.dismiss();
 });
 
 browser.setOnClickListener(new View.OnClickListener(){
-onClick: function() {
+onClick: function(){
 browsermenu()
 dialog.dismiss();
 }
@@ -264,8 +264,8 @@ dialog.dismiss();
 
 settings.setOnClickListener(new View.OnClickListener(){
 onClick: function(){
-settings2()
 dialog.dismiss();
+settings2()
 }
 });
 
@@ -282,17 +282,11 @@ onrun=false;
 run = 1;
 
 ctx.runOnUiThread(new java.lang.Runnable(){
-
 run: function(){
-
 if(GUI != null){
-
 GUI.dismiss();
-
 }
-
 }
-
 });
 
 }
@@ -386,7 +380,7 @@ settings2la.addView(settingsbtn);
 
 settings2di.setContentView(settings2la);
 
-settings2di.show()
+//settings2di.show()
 
 gmsettingsbtn.setOnClickListener(new View.OnClickListener(){
 onClick: function(){
