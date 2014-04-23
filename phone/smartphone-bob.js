@@ -528,6 +528,7 @@ var scroll = new ScrollView(ctx);
 
 bckgdla.setOrientation(LinearLayout.VERTICAL);
 
+scroll.addView(bckgdla);
 //((ViewGroup)scroll.getParent()).removeView(scroll);
 
 bckgdla.addView(red);
@@ -552,7 +553,6 @@ orange.setText("Orange");
 yellow.setText("Yellow");
 pink.setText("Pink");
 
-scroll.addView(bckgdla);
 bckgddi.setContentView(scroll);
 
 red.setOnClickListener(new View.OnClickListener({
