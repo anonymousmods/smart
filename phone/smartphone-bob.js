@@ -722,6 +722,7 @@ tmiLayout.addView(amount);
 tmiLayout.addView(data);
 tmiLayout.addView(add);
 tmiLayout.addView(ref);
+tmiLayout.addView(close);
 
 id.setHeight(LinearLayout.LayoutParams.WRAP_CONTENT);
 id.setWidth(LinearLayout.LayoutParams.WRAP_CONTENT);
