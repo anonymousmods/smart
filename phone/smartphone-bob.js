@@ -64,7 +64,7 @@ var layout = new LinearLayout(ctx);
 
 ModPE.setItem(511,"record_strad",0,"Phone");
 
-Item.setCraftRecipe(511, 1, 0, [265,2, 153,1, 331,5]);
+Item.addCraftRecipe(511, 1, 0, [265,2,0, 153,1,0, 331,5,0]);
 
 function createModPEDir(){
 
