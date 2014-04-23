@@ -1157,7 +1157,7 @@ pplshow.setBackgroundColor(Color.RED);
 stla.setBackgroundColor(Color.RED);
 stdi.setBackgroundColor(Color.RED);
 tmiDialog.setBackgroundColor(Color.RED);
-tmiLayout.setBackgroundColor(Color.RED));
+tmiLayout.setBackgroundColor(Color.RED);
 phnstla.setBackgroundColor(Color.RED);
 phnstdi.setBackgroundColor(Color.RED);
 settings2la.setBackgroundColor(Color.RED);
