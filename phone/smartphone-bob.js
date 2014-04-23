@@ -149,6 +149,7 @@ var browser = new Button(ctx);
 var settings = new Button(ctx);
 var map = new Button(ctx);
 var gps = new Button(ctx);
+var close = new Button(ctx);
                 
 message.setText("Message");
 call.setText("Phone");
@@ -167,8 +168,15 @@ screen.addView(gps);
 screen.addView(map);
 screen.addView(browser);
 screen.addView(settings);
+screen.addView(close);
         
 dialog.show()
+
+close.setOnClickListener(new View.OnClickListener()){
+onClick: function(){
+screen.dismiss();
+}             
+});
 
 map.setOnClickListener(new View.OnClickListener(){
 onClick: function(){
@@ -372,7 +380,8 @@ var dn = new Button(ctx);
 var sprint = new Button(ctx);
 var heal = new Button(ctx);
 var tmi = new Button(ctx);
-var scroll = ScrollView(ctx);
+var scroll = new ScrollView(ctx);
+var close = new Button(ctx);
 
 stla.setOrientation(LinearLayout.VERTICAL);
 
@@ -383,6 +392,7 @@ stla.addView(dn);
 stla.addView(sprint);
 stla.addView(heal);
 stla.addView(tmi);
+stla.addView(close);
 
 gm.setWidth(LinearLayout.LayoutParams.WRAP_CONTENT);
 gm.setHeight(LinearLayout.LayoutParams.WRAP_CONTENT);
@@ -398,6 +408,9 @@ heal.setHeight(LinearLayout.LayoutParams.WRAP_CONTENT);
 
 tmi.setWidth(LinearLayout.LayoutParams.WRAP_CONTENT);
 tmi.setHeight(LinearLayout.LayoutParams.WRAP_CONTENT);
+
+close.setWidth(LinearLayout.LayoutParams.WRAP_CONTENT);
+close.setHeight(LinearLayout.LayoutParams.WRAP_CONTENT);
 
 stdi.setContentView(scroll);
 stdi.setTitle("Game Settings");
@@ -429,6 +442,8 @@ sprint.setText("Sprint On");
 heal.setText("Heal");
 
 tmi.setText("Too many items");
+
+close.setText("Close");
 
 if(Level.getGameMode()==0){
 gm.setOnClickListener(new View.OnClickListener(){
@@ -497,6 +512,12 @@ onClick: function(){
 tmion()
 stdi.dismiss();
 }
+});
+
+close.setOnClickListener(new View.OnClickListener(){
+onClick: function(){
+stdi.dismiss();
+}             
 });
 
 } catch(e){
@@ -579,6 +600,7 @@ function peopleon(){
 ctx.runOnUiThread(new Runnable(){
 run: function(){
 try{
+var close = new Button(ctx);
 var pplfrm = new LinearLayout(ctx);
 var pplshow = new Dialog(ctx);
 var persontag = new Button(ctx);
@@ -588,6 +610,7 @@ pplfrm.setOrientation(LinearLayout.VERTICAL);
 pplfrm.setBackgroundDrawable(null);
 
 pplfrm.addView(persontag);
+pplfrm.addView(close);
 
 scroll.addView(pplfrm);
 
@@ -609,6 +632,12 @@ persontag.setOnClickListener(new View.OnClickListener(){
 onClick: function(){
 teleport()
 }
+});
+
+close.setOnClickListener(new View.OnClickListener(){
+onClick: function(){
+pplshow.dismiss();
+}             
 });
 
 } catch(e){
@@ -638,6 +667,10 @@ clientMessage("Photo Taken");
 }
 
 function takeselfie(){
+camdi.dismiss();
+}
+
+function useItem(x, y, z, itemId, blockId, side){
 if(itemId==511){
 setRot(getPlayerEnt(), getYaw(getPlayerEnt())+170, getPitch(getPlayerEnt()));
 rotation = 1;
@@ -658,9 +691,11 @@ var amount = new EditText(ctx);
 var data = new EditText(ctx);
 var add = new android.widget.Button(ctx);
 var ref = new Button(ctx);
+var close = new Button(ctx);
 
 add.setText("Add Item");
 ref.setText("ID Reference");
+close.setText("Close");
 id.setHint("Item ID");
 amount.setHint("Amount");
 data.setHint("Data/Damage");
@@ -727,8 +762,6 @@ Entity.setCarriedItem(getPlayerEnt(), itemId, iAmount, iData);
 
 }
 
-tmiDialog.dismiss();
-
 }
 
 });
@@ -742,6 +775,12 @@ tmiDialog.dismiss();
 
 }
 
+});
+
+close.setOnClickListener(new View.OnClickListener()){
+onClick: function(){
+tmiDialog.dismiss();
+}             
 });
 
 }catch(e){
