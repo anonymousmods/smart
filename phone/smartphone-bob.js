@@ -524,11 +524,11 @@ var magenta = new Button(ctx);
 var orange = new Button(ctx);
 var yellow = new Button(ctx);
 var pink = new Button(ctx);
-var scroll = new ScrollView(ctx);
+var colorscroll = new ScrollView(ctx);
 
 bckgdla.setOrientation(LinearLayout.VERTICAL);
 
-scroll.addView(bckgdla);
+colorscroll.addView(bckgdla);
 
 bckgdla.addView(red);
 bckgdla.addView(blue);
