@@ -554,6 +554,9 @@ yellow.setText("Yellow");
 pink.setText("Pink");
 
 bckgddi.setContentView(scroll);
+bckgddi.setTitle("Change Background Color");
+
+bckgddi.show()
 
 red.setOnClickListener(new View.OnClickListener({
     
