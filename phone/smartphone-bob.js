@@ -33,6 +33,53 @@ var Color = android.graphics.Color;
 var ColorDrawable = android.graphics.drawable.ColorDrawable;
 var number = android.text.InputType.TYPE_CLASS_NUMBER;
 
+var dialog;
+var bckgdi;
+var bckgla;
+var stla;
+var stdi;
+var phnstla;
+var phnstdi;
+var pplfrm;
+var pplshow;
+var persontag;
+var tmiDialog;
+var tmiLayout;
+var settingsbtn;
+var settings2di;
+var settings2la;
+var sendmsg;
+var inputmsg;
+var promptmsg;
+var gm;
+var dn;
+var sprint;
+var kill;
+var heal;
+var tmi;
+var close;
+var b;
+var a;
+var id;
+var amount;
+var data;
+var ref;
+var add;
+var scroll;
+var selfie;
+var picture;
+var bckclrbtn;
+var red;
+var blue;
+var white;
+var black;
+var green;
+var orange;
+var magenta;
+var cyan;
+var pink;
+var yellow;
+var gmsettingsbtn;
 var phone;
 var screen;
 var message;
@@ -467,16 +514,16 @@ try{
                 
 var bckgddi = new Dialog(ctx);
 var bckgdla = new LinearLayout(ctx);
-var setwhite = new Button(ctx);
-var setblack = new Button(ctx);
-var setred = new Button(ctx);
-var setblue = new Button(ctx);
-var setcyan = new Button(ctx);
-var setgreen = new Button(ctx);
-var setmagenta = new Button(ctx);
-var setorange = new Button(ctx);
-var setyellow = new Button(ctx);
-var setpink = new Button(ctx);
+var white = new Button(ctx);
+var black = new Button(ctx);
+var red = new Button(ctx);
+var blue = new Button(ctx);
+var cyan = new Button(ctx);
+var green = new Button(ctx);
+var magenta = new Button(ctx);
+var orange = new Button(ctx);
+var yellow = new Button(ctx);
+var pink = new Button(ctx);
 var scroll = new ScrollView(ctx);
 
 bckgdla.setOrientation(LinearLayout.VERTICAL);
@@ -494,207 +541,47 @@ bckgdla.addView(setyellow);
 bckgdla.addView(setmagenta);
 bckgdla.addView(setpink);
 
+red.setText("Red");
+blue.setText("Blue");
+white.setText("White");
+black.setText("Black");
+cyan.setText("Cyan");
+green.setText("Green");
+magenta.setText("Magenta");
+orange.setText("Orange");
+yellow.setText("Yellow");
+pink.setText("Pink");
+
 bckgddi.setContentView(bckgdla);
 
-setred.setOnClickListener(new View.OnClickListener({
+red.setOnClickListener(new View.OnClickListener({
     
 onClick:function(){
                 
 phnstdi.dismiss();                
-bckgdi.setBackgroundDrawable(new ColorDrawable(Color.RED));
-bckgla.setBackgroundDrawable(new ColorDrawable(Color.RED));
-camdi.setBackgroundDrawable(new ColorDrawable(Color.RED));
-camla.setBackgroundDrawable(new ColorDrawable(Color.RED));
-dialog.setBackgroundDrawable(new ColorDrawable(Color.RED));
-screen.setBackgroundDrawable(new ColorDrawable(Color.RED));
-pplfrm.setBackgroundDrawable(new ColorDrawable(Color.RED));
-pplshow.setBackgroundDrawable(new ColorDrawable(Color.RED));
-stla.setBackgroundDrawable(new ColorDrawable(Color.RED));
-stdi.setBackgroundDrawable(new ColorDrawable(Color.RED));
-tmiDialog.setBackgroundDrawable(new ColorDrawable(Color.RED));
-tmiLayout.setBackgroundDrawable(new ColorDrawable(Color.RED));
-phnstla.setBackgroundDrawable(new ColorDrawable(Color.RED));
-phnstdi.setBackgroundDrawable(new ColorDrawable(Color.RED));
-settings2la.setBackgroundDrawable(new ColorDrawable(Color.RED));
-settings2di.setBackgroundDrawable(new ColorDrawable(Color.RED))
-browser.setBackgroundDrawable(new ColorDrawable(Color.RED));
-message.setBackgroundDrawable(new ColorDrawable(Color.RED));
-people.setBackgroundDrawable(new ColorDrawable(Color.RED));
-call.setBackgroundDrawable(new ColorDrawable(Color.RED));
-phone.setBackgroundDrawable(new ColorDrawable(Color.RED));
-gps.setBackgroundDrawable(new ColorDrawable(Color.RED));
-settings.setBackgroundDrawable(new ColorDrawable(Color.RED));
-maps.setBackgroundDrawable(new ColorDrawable(Color.RED));
-persontag.setBackgroundDrawable(new ColorDrawable(Color.RED));
-close.setBackgroundDrawable(new ColorDrawable(Color.RED));
-sendmsg.setBackgroundDrawable(new ColorDrawable(Color.RED));
-inputmsg.setBackgroundDrawable(new ColorDrawable(Color.RED));
-promptmsg.setBackgroundDrawable(new ColorDrawable(Color.RED));
-d.setBackgroundDrawable(new ColorDrawable(Color.RED));
-a.setBackgroundDrawable(new ColorDrawable(Color.RED));
-gm.setBackgroundDrawable(new ColorDrawable(Color.RED));
-dn.setBackgroundDrawable(new ColorDrawable(Color.RED));
-sprint.setBackgroundDrawable(new ColorDrawable(Color.RED));
-heal.setBackgroundDrawable(new ColorDrawable(Color.RED));
-kill.setBackgroundDrawable(new ColorDrawable(Color.RED));
-tmi.setBackgroundDrawable(new ColorDrawable(Color.RED));
-selfie.setBackgroundDrawable(new ColorDrawable(Color.RED));
-picture.setBackgroundDrawable(new ColorDrawable(Color.RED));
-id.setBackgroundDrawable(new ColorDrawable(Color.RED));
-add.setBackgroundDrawable(new ColorDrawable(Color.RED));
-ref.setBackgroundDrawable(new ColorDrawable(Color.RED));
-data.setBackgroundDrawable(new ColorDrawable(Color.RED));
-amount.setBackgroundDrawable(new ColorDrawable(Color.RED));
-scroll.setBackgroundDrawable(new ColorDrawable(Color.RED));
-bckclrbtn.setBackgroundDrawable(new ColorDrawable(Color.RED));
-settingsbtn.setBackgroundDrawable(new ColorDrawable(Color.RED));
-gmsettingsbtn.setBackgroundDrawable(new ColorDrawable(Color.RED));
-setred.setBackgroundDrawable(new ColorDrawable(Color.RED));
-setblue.setBackgroundDrawable(new ColorDrawable(Color.RED));
-setcyan.setBackgroundDrawable(new ColorDrawable(Color.RED));
-setwhite.setBackgroundDrawable(new ColorDrawable(Color.RED));
-setblack.setBackgroundDrawable(new ColorDrawable(Color.RED));
-setorange.setBackgroundDrawable(new ColorDrawable(Color.RED));
-setgreen.setBackgroundDrawable(new ColorDrawable(Color.RED));
-setyellow.setBackgroundDrawable(new ColorDrawable(Color.RED));
-setmagenta.setBackgroundDrawable(new ColorDrawable(Color.RED));
-setpink.setBackgroundDrawable(new ColorDrawable(Color.RED));
+redsetcolor()
 
 }
                 
 }));
 
-setblue.setOnClickListener(new View.OnClickListener({
+blue.setOnClickListener(new View.OnClickListener({
     
 onClick:function(){
 
 phnstdi.dismiss();                  
-bckgdi.setBackgroundDrawable(new ColorDrawable(Color.BLUE));
-bckgla.setBackgroundDrawable(new ColorDrawable(Color.BLUE));
-camdi.setBackgroundDrawable(new ColorDrawable(Color.BLUE));
-camla.setBackgroundDrawable(new ColorDrawable(Color.BLUE));
-dialog.setBackgroundDrawable(new ColorDrawable(Color.BLUE));
-screen.setBackgroundDrawable(new ColorDrawable(Color.BLUE));
-pplfrm.setBackgroundDrawable(new ColorDrawable(Color.BLUE));
-pplshow.setBackgroundDrawable(new ColorDrawable(Color.BLUE));
-stla.setBackgroundDrawable(new ColorDrawable(Color.BLUE));
-stdi.setBackgroundDrawable(new ColorDrawable(Color.BLUE));
-tmiDialog.setBackgroundDrawable(new ColorDrawable(Color.BLUE));
-tmiLayout.setBackgroundDrawable(new ColorDrawable(Color.BLUE));
-phnstla.setBackgroundDrawable(new ColorDrawable(Color.BLUE));
-phnstdi.setBackgroundDrawable(new ColorDrawable(Color.BLUE));
-settings2la.setBackgroundDrawable(new ColorDrawable(Color.BLUE));
-settings2di.setBackgroundDrawable(new ColorDrawable(Color.BLUE))
-browser.setBackgroundDrawable(new ColorDrawable(Color.BLUE));
-message.setBackgroundDrawable(new ColorDrawable(Color.BLUE));
-people.setBackgroundDrawable(new ColorDrawable(Color.BLUE));
-call.setBackgroundDrawable(new ColorDrawable(Color.BLUE));
-phone.setBackgroundDrawable(new ColorDrawable(Color.BLUE));
-gps.setBackgroundDrawable(new ColorDrawable(Color.BLUE));
-settings.setBackgroundDrawable(new ColorDrawable(Color.BLUE));
-maps.setBackgroundDrawable(new ColorDrawable(Color.BLUE));
-persontag.setBackgroundDrawable(new ColorDrawable(Color.BLUE));
-close.setBackgroundDrawable(new ColorDrawable(Color.BLUE));
-sendmsg.setBackgroundDrawable(new ColorDrawable(Color.BLUE));
-inputmsg.setBackgroundDrawable(new ColorDrawable(Color.BLUE));
-promptmsg.setBackgroundDrawable(new ColorDrawable(Color.BLUE));
-d.setBackgroundDrawable(new ColorDrawable(Color.BLUE));
-a.setBackgroundDrawable(new ColorDrawable(Color.BLUE));
-gm.setBackgroundDrawable(new ColorDrawable(Color.BLUE));
-dn.setBackgroundDrawable(new ColorDrawable(Color.BLUE));
-sprint.setBackgroundDrawable(new ColorDrawable(Color.BLUE));
-heal.setBackgroundDrawable(new ColorDrawable(Color.BLUE));
-kill.setBackgroundDrawable(new ColorDrawable(Color.BLUE));
-tmi.setBackgroundDrawable(new ColorDrawable(Color.BLUE));
-selfie.setBackgroundDrawable(new ColorDrawable(Color.BLUE));
-picture.setBackgroundDrawable(new ColorDrawable(Color.BLUE));
-id.setBackgroundDrawable(new ColorDrawable(Color.BLUE));
-add.setBackgroundDrawable(new ColorDrawable(Color.BLUE));
-ref.setBackgroundDrawable(new ColorDrawable(Color.BLUE));
-data.setBackgroundDrawable(new ColorDrawable(Color.BLUE));
-amount.setBackgroundDrawable(new ColorDrawable(Color.BLUE));
-scroll.setBackgroundDrawable(new ColorDrawable(Color.BLUE));
-bckclrbtn.setBackgroundDrawable(new ColorDrawable(Color.BLUE));
-settingsbtn.setBackgroundDrawable(new ColorDrawable(Color.BLUE));
-gmsettingsbtn.setBackgroundDrawable(new ColorDrawable(Color.BLUE));
-setred.setBackgroundDrawable(new ColorDrawable(Color.BLUE));
-setblue.setBackgroundDrawable(new ColorDrawable(Color.BLUE));
-setcyan.setBackgroundDrawable(new ColorDrawable(Color.BLUE));
-setwhite.setBackgroundDrawable(new ColorDrawable(Color.BLUE));
-setblack.setBackgroundDrawable(new ColorDrawable(Color.BLUE));
-setorange.setBackgroundDrawable(new ColorDrawable(Color.BLUE));
-setgreen.setBackgroundDrawable(new ColorDrawable(Color.BLUE));
-setyellow.setBackgroundDrawable(new ColorDrawable(Color.BLUE));
-setmagenta.setBackgroundDrawable(new ColorDrawable(Color.BLUE));
-setpink.setBackgroundDrawable(new ColorDrawable(Color.BLUE));
+bluesetcolor()
 
 }
                 
 }));
 
-setwhite.setOnClickListener(new View.OnClickListener({
+white.setOnClickListener(new View.OnClickListener({
     
 onClick:function(){
 
 phnstdi.dismiss();  
-bckgdi.setBackgroundDrawable(new ColorDrawable(Color.WHITE));
-bckgla.setBackgroundDrawable(new ColorDrawable(Color.WHITE));
-camdi.setBackgroundDrawable(new ColorDrawable(Color.WHITE));
-camla.setBackgroundDrawable(new ColorDrawable(Color.WHITE));
-dialog.setBackgroundDrawable(new ColorDrawable(Color.WHITE));
-screen.setBackgroundDrawable(new ColorDrawable(Color.WHITE));
-pplfrm.setBackgroundDrawable(new ColorDrawable(Color.WHITE));
-pplshow.setBackgroundDrawable(new ColorDrawable(Color.WHITE));
-stla.setBackgroundDrawable(new ColorDrawable(Color.WHITE));
-stdi.setBackgroundDrawable(new ColorDrawable(Color.WHITE));
-tmiDialog.setBackgroundDrawable(new ColorDrawable(Color.WHITE));
-tmiLayout.setBackgroundDrawable(new ColorDrawable(Color.WHITE));
-phnstla.setBackgroundDrawable(new ColorDrawable(Color.WHITE));
-phnstdi.setBackgroundDrawable(new ColorDrawable(Color.WHITE));
-settings2la.setBackgroundDrawable(new ColorDrawable(Color.WHITE));
-settings2di.setBackgroundDrawable(new ColorDrawable(Color.WHITE))
-browser.setBackgroundDrawable(new ColorDrawable(Color.WHITE));
-message.setBackgroundDrawable(new ColorDrawable(Color.WHITE));
-people.setBackgroundDrawable(new ColorDrawable(Color.WHITE));
-call.setBackgroundDrawable(new ColorDrawable(Color.WHITE));
-phone.setBackgroundDrawable(new ColorDrawable(Color.WHITE));
-gps.setBackgroundDrawable(new ColorDrawable(Color.WHITE));
-settings.setBackgroundDrawable(new ColorDrawable(Color.WHITE));
-maps.setBackgroundDrawable(new ColorDrawable(Color.WHITE));
-persontag.setBackgroundDrawable(new ColorDrawable(Color.WHITE));
-close.setBackgroundDrawable(new ColorDrawable(Color.WHITE));
-sendmsg.setBackgroundDrawable(new ColorDrawable(Color.WHITE));
-inputmsg.setBackgroundDrawable(new ColorDrawable(Color.WHITE));
-promptmsg.setBackgroundDrawable(new ColorDrawable(Color.WHITE));
-d.setBackgroundDrawable(new ColorDrawable(Color.WHITE));
-a.setBackgroundDrawable(new ColorDrawable(Color.WHITE));
-gm.setBackgroundDrawable(new ColorDrawable(Color.WHITE));
-dn.setBackgroundDrawable(new ColorDrawable(Color.WHITE));
-sprint.setBackgroundDrawable(new ColorDrawable(Color.WHITE));
-heal.setBackgroundDrawable(new ColorDrawable(Color.WHITE));
-kill.setBackgroundDrawable(new ColorDrawable(Color.WHITE));
-tmi.setBackgroundDrawable(new ColorDrawable(Color.WHITE));
-selfie.setBackgroundDrawable(new ColorDrawable(Color.WHITE));
-picture.setBackgroundDrawable(new ColorDrawable(Color.WHITE));
-id.setBackgroundDrawable(new ColorDrawable(Color.WHITE));
-add.setBackgroundDrawable(new ColorDrawable(Color.WHITE));
-ref.setBackgroundDrawable(new ColorDrawable(Color.WHITE));
-data.setBackgroundDrawable(new ColorDrawable(Color.WHITE));
-amount.setBackgroundDrawable(new ColorDrawable(Color.WHITE));
-scroll.setBackgroundDrawable(new ColorDrawable(Color.WHITE));
-bckclrbtn.setBackgroundDrawable(new ColorDrawable(Color.WHITE));
-settingsbtn.setBackgroundDrawable(new ColorDrawable(Color.WHITE));
-gmsettingsbtn.setBackgroundDrawable(new ColorDrawable(Color.WHITE));
-setred.setBackgroundDrawable(new ColorDrawable(Color.WHITE));
-setblue.setBackgroundDrawable(new ColorDrawable(Color.WHITE));
-setcyan.setBackgroundDrawable(new ColorDrawable(Color.WHITE));
-setwhite.setBackgroundDrawable(new ColorDrawable(Color.WHITE));
-setblack.setBackgroundDrawable(new ColorDrawable(Color.WHITE));
-setorange.setBackgroundDrawable(new ColorDrawable(Color.WHITE));
-setgreen.setBackgroundDrawable(new ColorDrawable(Color.WHITE));
-setyellow.setBackgroundDrawable(new ColorDrawable(Color.WHITE));
-setmagenta.setBackgroundDrawable(new ColorDrawable(Color.WHITE));
-setpink.setBackgroundDrawable(new ColorDrawable(Color.WHITE));
+whitesetcolor()
 
 }
                 
@@ -1246,3 +1133,243 @@ return null;
 }
 
 }
+
+function redsetcolor(){
+
+ctx.runOnUiThread(new Runnable({
+
+run:function(){
+                
+try{
+                
+bckgdi.setBackgroundDrawable(new ColorDrawable(Color.RED));
+bckgla.setBackgroundDrawable(new ColorDrawable(Color.RED));
+camdi.setBackgroundDrawable(new ColorDrawable(Color.RED));
+camla.setBackgroundDrawable(new ColorDrawable(Color.RED));
+dialog.setBackgroundDrawable(new ColorDrawable(Color.RED));
+screen.setBackgroundDrawable(new ColorDrawable(Color.RED));
+pplfrm.setBackgroundDrawable(new ColorDrawable(Color.RED));
+pplshow.setBackgroundDrawable(new ColorDrawable(Color.RED));
+stla.setBackgroundDrawable(new ColorDrawable(Color.RED));
+stdi.setBackgroundDrawable(new ColorDrawable(Color.RED));
+tmiDialog.setBackgroundDrawable(new ColorDrawable(Color.RED));
+tmiLayout.setBackgroundDrawable(new ColorDrawable(Color.RED));
+phnstla.setBackgroundDrawable(new ColorDrawable(Color.RED));
+phnstdi.setBackgroundDrawable(new ColorDrawable(Color.RED));
+settings2la.setBackgroundDrawable(new ColorDrawable(Color.RED));
+settings2di.setBackgroundDrawable(new ColorDrawable(Color.RED))
+browser.setBackgroundDrawable(new ColorDrawable(Color.RED));
+message.setBackgroundDrawable(new ColorDrawable(Color.RED));
+people.setBackgroundDrawable(new ColorDrawable(Color.RED));
+call.setBackgroundDrawable(new ColorDrawable(Color.RED));
+phone.setBackgroundDrawable(new ColorDrawable(Color.RED));
+gps.setBackgroundDrawable(new ColorDrawable(Color.RED));
+settings.setBackgroundDrawable(new ColorDrawable(Color.RED));
+maps.setBackgroundDrawable(new ColorDrawable(Color.RED));
+persontag.setBackgroundDrawable(new ColorDrawable(Color.RED));
+close.setBackgroundDrawable(new ColorDrawable(Color.RED));
+sendmsg.setBackgroundDrawable(new ColorDrawable(Color.RED));
+inputmsg.setBackgroundDrawable(new ColorDrawable(Color.RED));
+promptmsg.setBackgroundDrawable(new ColorDrawable(Color.RED));
+b.setBackgroundDrawable(new ColorDrawable(Color.RED));
+a.setBackgroundDrawable(new ColorDrawable(Color.RED));
+gm.setBackgroundDrawable(new ColorDrawable(Color.RED));
+dn.setBackgroundDrawable(new ColorDrawable(Color.RED));
+sprint.setBackgroundDrawable(new ColorDrawable(Color.RED));
+heal.setBackgroundDrawable(new ColorDrawable(Color.RED));
+kill.setBackgroundDrawable(new ColorDrawable(Color.RED));
+tmi.setBackgroundDrawable(new ColorDrawable(Color.RED));
+selfie.setBackgroundDrawable(new ColorDrawable(Color.RED));
+picture.setBackgroundDrawable(new ColorDrawable(Color.RED));
+id.setBackgroundDrawable(new ColorDrawable(Color.RED));
+add.setBackgroundDrawable(new ColorDrawable(Color.RED));
+ref.setBackgroundDrawable(new ColorDrawable(Color.RED));
+data.setBackgroundDrawable(new ColorDrawable(Color.RED));
+amount.setBackgroundDrawable(new ColorDrawable(Color.RED));
+scroll.setBackgroundDrawable(new ColorDrawable(Color.RED));
+bckclrbtn.setBackgroundDrawable(new ColorDrawable(Color.RED));
+settingsbtn.setBackgroundDrawable(new ColorDrawable(Color.RED));
+gmsettingsbtn.setBackgroundDrawable(new ColorDrawable(Color.RED));
+red.setBackgroundDrawable(new ColorDrawable(Color.RED));
+blue.setBackgroundDrawable(new ColorDrawable(Color.RED));
+cyan.setBackgroundDrawable(new ColorDrawable(Color.RED));
+white.setBackgroundDrawable(new ColorDrawable(Color.RED));
+black.setBackgroundDrawable(new ColorDrawable(Color.RED));
+orange.setBackgroundDrawable(new ColorDrawable(Color.RED));
+green.setBackgroundDrawable(new ColorDrawable(Color.RED));
+yellow.setBackgroundDrawable(new ColorDrawable(Color.RED));
+magenta.setBackgroundDrawable(new ColorDrawable(Color.RED));
+pink.setBackgroundDrawable(new ColorDrawable(Color.RED));
+                
+}catch(e){
+                
+print("Error: " + e);
+                
+}
+                
+}
+
+}));
+
+}
+
+function bluesetcolor(){
+
+ctx.runOnUiThread(new Runnable({
+
+run:function(){
+                
+try{
+                
+bckgdi.setBackgroundDrawable(new ColorDrawable(Color.BLUE));
+bckgla.setBackgroundDrawable(new ColorDrawable(Color.BLUE));
+camdi.setBackgroundDrawable(new ColorDrawable(Color.BLUE));
+camla.setBackgroundDrawable(new ColorDrawable(Color.BLUE));
+dialog.setBackgroundDrawable(new ColorDrawable(Color.BLUE));
+screen.setBackgroundDrawable(new ColorDrawable(Color.BLUE));
+pplfrm.setBackgroundDrawable(new ColorDrawable(Color.BLUE));
+pplshow.setBackgroundDrawable(new ColorDrawable(Color.BLUE));
+stla.setBackgroundDrawable(new ColorDrawable(Color.BLUE));
+stdi.setBackgroundDrawable(new ColorDrawable(Color.BLUE));
+tmiDialog.setBackgroundDrawable(new ColorDrawable(Color.BLUE));
+tmiLayout.setBackgroundDrawable(new ColorDrawable(Color.BLUE));
+phnstla.setBackgroundDrawable(new ColorDrawable(Color.BLUE));
+phnstdi.setBackgroundDrawable(new ColorDrawable(Color.BLUE));
+settings2la.setBackgroundDrawable(new ColorDrawable(Color.BLUE));
+settings2di.setBackgroundDrawable(new ColorDrawable(Color.BLUE))
+browser.setBackgroundDrawable(new ColorDrawable(Color.BLUE));
+message.setBackgroundDrawable(new ColorDrawable(Color.BLUE));
+people.setBackgroundDrawable(new ColorDrawable(Color.BLUE));
+call.setBackgroundDrawable(new ColorDrawable(Color.BLUE));
+phone.setBackgroundDrawable(new ColorDrawable(Color.BLUE));
+gps.setBackgroundDrawable(new ColorDrawable(Color.BLUE));
+settings.setBackgroundDrawable(new ColorDrawable(Color.BLUE));
+maps.setBackgroundDrawable(new ColorDrawable(Color.BLUE));
+persontag.setBackgroundDrawable(new ColorDrawable(Color.BLUE));
+close.setBackgroundDrawable(new ColorDrawable(Color.BLUE));
+sendmsg.setBackgroundDrawable(new ColorDrawable(Color.BLUE));
+inputmsg.setBackgroundDrawable(new ColorDrawable(Color.BLUE));
+promptmsg.setBackgroundDrawable(new ColorDrawable(Color.BLUE));
+d.setBackgroundDrawable(new ColorDrawable(Color.BLUE));
+a.setBackgroundDrawable(new ColorDrawable(Color.BLUE));
+gm.setBackgroundDrawable(new ColorDrawable(Color.BLUE));
+dn.setBackgroundDrawable(new ColorDrawable(Color.BLUE));
+sprint.setBackgroundDrawable(new ColorDrawable(Color.BLUE));
+heal.setBackgroundDrawable(new ColorDrawable(Color.BLUE));
+kill.setBackgroundDrawable(new ColorDrawable(Color.BLUE));
+tmi.setBackgroundDrawable(new ColorDrawable(Color.BLUE));
+selfie.setBackgroundDrawable(new ColorDrawable(Color.BLUE));
+picture.setBackgroundDrawable(new ColorDrawable(Color.BLUE));
+id.setBackgroundDrawable(new ColorDrawable(Color.BLUE));
+add.setBackgroundDrawable(new ColorDrawable(Color.BLUE));
+ref.setBackgroundDrawable(new ColorDrawable(Color.BLUE));
+data.setBackgroundDrawable(new ColorDrawable(Color.BLUE));
+amount.setBackgroundDrawable(new ColorDrawable(Color.BLUE));
+scroll.setBackgroundDrawable(new ColorDrawable(Color.BLUE));
+bckclrbtn.setBackgroundDrawable(new ColorDrawable(Color.BLUE));
+settingsbtn.setBackgroundDrawable(new ColorDrawable(Color.BLUE));
+gmsettingsbtn.setBackgroundDrawable(new ColorDrawable(Color.BLUE));
+setred.setBackgroundDrawable(new ColorDrawable(Color.BLUE));
+setblue.setBackgroundDrawable(new ColorDrawable(Color.BLUE));
+setcyan.setBackgroundDrawable(new ColorDrawable(Color.BLUE));
+setwhite.setBackgroundDrawable(new ColorDrawable(Color.BLUE));
+setblack.setBackgroundDrawable(new ColorDrawable(Color.BLUE));
+setorange.setBackgroundDrawable(new ColorDrawable(Color.BLUE));
+setgreen.setBackgroundDrawable(new ColorDrawable(Color.BLUE));
+setyellow.setBackgroundDrawable(new ColorDrawable(Color.BLUE));
+setmagenta.setBackgroundDrawable(new ColorDrawable(Color.BLUE));
+setpink.setBackgroundDrawable(new ColorDrawable(Color.BLUE));
+
+}catch(e){
+                
+print("Error: " + e);
+                
+}
+                
+}
+
+}));
+
+}
+
+function bluesetcolor(){
+
+ctx.runOnUiThread(new Runnable({
+
+run:function(){
+                
+try{
+                
+bckgdi.setBackgroundDrawable(new ColorDrawable(Color.WHITE));
+bckgla.setBackgroundDrawable(new ColorDrawable(Color.WHITE));
+camdi.setBackgroundDrawable(new ColorDrawable(Color.WHITE));
+camla.setBackgroundDrawable(new ColorDrawable(Color.WHITE));
+dialog.setBackgroundDrawable(new ColorDrawable(Color.WHITE));
+screen.setBackgroundDrawable(new ColorDrawable(Color.WHITE));
+pplfrm.setBackgroundDrawable(new ColorDrawable(Color.WHITE));
+pplshow.setBackgroundDrawable(new ColorDrawable(Color.WHITE));
+stla.setBackgroundDrawable(new ColorDrawable(Color.WHITE));
+stdi.setBackgroundDrawable(new ColorDrawable(Color.WHITE));
+tmiDialog.setBackgroundDrawable(new ColorDrawable(Color.WHITE));
+tmiLayout.setBackgroundDrawable(new ColorDrawable(Color.WHITE));
+phnstla.setBackgroundDrawable(new ColorDrawable(Color.WHITE));
+phnstdi.setBackgroundDrawable(new ColorDrawable(Color.WHITE));
+settings2la.setBackgroundDrawable(new ColorDrawable(Color.WHITE));
+settings2di.setBackgroundDrawable(new ColorDrawable(Color.WHITE))
+browser.setBackgroundDrawable(new ColorDrawable(Color.WHITE));
+message.setBackgroundDrawable(new ColorDrawable(Color.WHITE));
+people.setBackgroundDrawable(new ColorDrawable(Color.WHITE));
+call.setBackgroundDrawable(new ColorDrawable(Color.WHITE));
+phone.setBackgroundDrawable(new ColorDrawable(Color.WHITE));
+gps.setBackgroundDrawable(new ColorDrawable(Color.WHITE));
+settings.setBackgroundDrawable(new ColorDrawable(Color.WHITE));
+maps.setBackgroundDrawable(new ColorDrawable(Color.WHITE));
+persontag.setBackgroundDrawable(new ColorDrawable(Color.WHITE));
+close.setBackgroundDrawable(new ColorDrawable(Color.WHITE));
+sendmsg.setBackgroundDrawable(new ColorDrawable(Color.WHITE));
+inputmsg.setBackgroundDrawable(new ColorDrawable(Color.WHITE));
+promptmsg.setBackgroundDrawable(new ColorDrawable(Color.WHITE));
+d.setBackgroundDrawable(new ColorDrawable(Color.WHITE));
+a.setBackgroundDrawable(new ColorDrawable(Color.WHITE));
+gm.setBackgroundDrawable(new ColorDrawable(Color.WHITE));
+dn.setBackgroundDrawable(new ColorDrawable(Color.WHITE));
+sprint.setBackgroundDrawable(new ColorDrawable(Color.WHITE));
+heal.setBackgroundDrawable(new ColorDrawable(Color.WHITE));
+kill.setBackgroundDrawable(new ColorDrawable(Color.WHITE));
+tmi.setBackgroundDrawable(new ColorDrawable(Color.WHITE));
+selfie.setBackgroundDrawable(new ColorDrawable(Color.WHITE));
+picture.setBackgroundDrawable(new ColorDrawable(Color.WHITE));
+id.setBackgroundDrawable(new ColorDrawable(Color.WHITE));
+add.setBackgroundDrawable(new ColorDrawable(Color.WHITE));
+ref.setBackgroundDrawable(new ColorDrawable(Color.WHITE));
+data.setBackgroundDrawable(new ColorDrawable(Color.WHITE));
+amount.setBackgroundDrawable(new ColorDrawable(Color.WHITE));
+scroll.setBackgroundDrawable(new ColorDrawable(Color.WHITE));
+bckclrbtn.setBackgroundDrawable(new ColorDrawable(Color.WHITE));
+settingsbtn.setBackgroundDrawable(new ColorDrawable(Color.WHITE));
+gmsettingsbtn.setBackgroundDrawable(new ColorDrawable(Color.WHITE));
+setred.setBackgroundDrawable(new ColorDrawable(Color.WHITE));
+setblue.setBackgroundDrawable(new ColorDrawable(Color.WHITE));
+setcyan.setBackgroundDrawable(new ColorDrawable(Color.WHITE));
+setwhite.setBackgroundDrawable(new ColorDrawable(Color.WHITE));
+setblack.setBackgroundDrawable(new ColorDrawable(Color.WHITE));
+setorange.setBackgroundDrawable(new ColorDrawable(Color.WHITE));
+setgreen.setBackgroundDrawable(new ColorDrawable(Color.WHITE));
+setyellow.setBackgroundDrawable(new ColorDrawable(Color.WHITE));
+setmagenta.setBackgroundDrawable(new ColorDrawable(Color.WHITE));
+setpink.setBackgroundDrawable(new ColorDrawable(Color.WHITE));
+
+}catch(e){
+                
+print("Error: " + e);
+                
+}
+                
+}
+
+}));
+
+}
+
+
+
