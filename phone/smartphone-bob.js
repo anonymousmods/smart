@@ -159,6 +159,7 @@ browser.setText("Browser");
 settings.setText("Setting");
 map.setText("Maps");
 gps.setText("GPS"); 
+close.setText("Close");
             
 //screen.addView(message);
 //screen.addView(call);
@@ -172,7 +173,7 @@ screen.addView(close);
         
 dialog.show()
 
-close.setOnClickListener(new View.OnClickListener()){
+close.setOnClickListener(new View.OnClickListener(){
 onClick: function(){
 screen.dismiss();
 }             
@@ -604,7 +605,7 @@ var close = new Button(ctx);
 var pplfrm = new LinearLayout(ctx);
 var pplshow = new Dialog(ctx);
 var persontag = new Button(ctx);
-var scroll = ScrollView(ctx);
+var scroll = new ScrollView(ctx);
 
 pplfrm.setOrientation(LinearLayout.VERTICAL);
 pplfrm.setBackgroundDrawable(null);
@@ -627,6 +628,7 @@ prsnz = Player.getZ();
 }
 
 persontag.setText("" + personname);
+close.setText("Close");
 
 persontag.setOnClickListener(new View.OnClickListener(){
 onClick: function(){
@@ -777,7 +779,7 @@ tmiDialog.dismiss();
 
 });
 
-close.setOnClickListener(new View.OnClickListener()){
+close.setOnClickListener(new View.OnClickListener(){
 onClick: function(){
 tmiDialog.dismiss();
 }             
