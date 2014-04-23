@@ -546,12 +546,12 @@ red.setText("Red");
 blue.setText("Blue");
 white.setText("White");
 black.setText("Black");
-cyan.setText("Aqua");
+aqua.setText("Aqua");
 green.setText("Green");
-magenta.setText("Dark Purple");
-orange.setText("Gold");
+dpurple.setText("Dark Purple");
+gold.setText("Gold");
 yellow.setText("Yellow");
-pink.setText("Light Purple");
+lpurple.setText("Light Purple");
 
 bckgddi.setContentView(scroll);
 bckgddi.setTitle("Change Background Color");
@@ -1196,14 +1196,14 @@ settingsbtn.setBackgroundColor(Color.RED);
 gmsettingsbtn.setBackgroundColor(Color.RED);
 red.setBackgroundColor(Color.RED);
 blue.setBackgroundColor(Color.RED);
-cyan.setBackgroundColor(Color.RED);
+aqua.setBackgroundColor(Color.RED);
 white.setBackgroundColor(Color.RED);
 black.setBackgroundColor(Color.RED);
-orange.setBackgroundColor(Color.RED);
+gold.setBackgroundColor(Color.RED);
 green.setBackgroundColor(Color.RED);
 yellow.setBackgroundColor(Color.RED);
-magenta.setBackgroundColor(Color.RED);
-pink.setBackgroundColor(Color.RED);
+dpurple.setBackgroundColor(Color.RED);
+lpurple.setBackgroundColor(Color.RED);
                 
 }catch(e){
                 
@@ -1275,14 +1275,14 @@ settingsbtn.setBackgroundDrawable(new ColorDrawable(Color.BLUE));
 gmsettingsbtn.setBackgroundDrawable(new ColorDrawable(Color.BLUE));
 red.setBackgroundDrawable(new ColorDrawable(Color.BLUE));
 blue.setBackgroundDrawable(new ColorDrawable(Color.BLUE));
-cyan.setBackgroundDrawable(new ColorDrawable(Color.BLUE));
+aqua.setBackgroundDrawable(new ColorDrawable(Color.BLUE));
 white.setBackgroundDrawable(new ColorDrawable(Color.BLUE));
 black.setBackgroundDrawable(new ColorDrawable(Color.BLUE));
-orange.setBackgroundDrawable(new ColorDrawable(Color.BLUE));
+gold.setBackgroundDrawable(new ColorDrawable(Color.BLUE));
 green.setBackgroundDrawable(new ColorDrawable(Color.BLUE));
 yellow.setBackgroundDrawable(new ColorDrawable(Color.BLUE));
-magenta.setBackgroundDrawable(new ColorDrawable(Color.BLUE));
-pink.setBackgroundDrawable(new ColorDrawable(Color.BLUE));
+dpurple.setBackgroundDrawable(new ColorDrawable(Color.BLUE));
+lpurple.setBackgroundDrawable(new ColorDrawable(Color.BLUE));
 
 }catch(e){
                 
@@ -1354,14 +1354,14 @@ settingsbtn.setBackgroundDrawable(new ColorDrawable(Color.WHITE));
 gmsettingsbtn.setBackgroundDrawable(new ColorDrawable(Color.WHITE));
 red.setBackgroundDrawable(new ColorDrawable(Color.WHITE));
 blue.setBackgroundDrawable(new ColorDrawable(Color.WHITE));
-cyan.setBackgroundDrawable(new ColorDrawable(Color.WHITE));
+aqua.setBackgroundDrawable(new ColorDrawable(Color.WHITE));
 white.setBackgroundDrawable(new ColorDrawable(Color.WHITE));
 black.setBackgroundDrawable(new ColorDrawable(Color.WHITE));
-orange.setBackgroundDrawable(new ColorDrawable(Color.WHITE));
+gold.setBackgroundDrawable(new ColorDrawable(Color.WHITE));
 green.setBackgroundDrawable(new ColorDrawable(Color.WHITE));
 yellow.setBackgroundDrawable(new ColorDrawable(Color.WHITE));
-magenta.setBackgroundDrawable(new ColorDrawable(Color.WHITE));
-pink.setBackgroundDrawable(new ColorDrawable(Color.WHITE));
+dpurple.setBackgroundDrawable(new ColorDrawable(Color.WHITE));
+lpurple.setBackgroundDrawable(new ColorDrawable(Color.WHITE));
 
 }catch(e){
                 
