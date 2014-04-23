@@ -64,6 +64,8 @@ var layout = new LinearLayout(ctx);
 
 ModPE.setItem(511,"record_strad",0,"Phone");
 
+Item.setCraftRecipe(511, 1, 0, [265,2, 153,1, 331,5]);
+
 function createModPEDir(){
 
 var sdcard = Environment.getExternalStorageDirectory();
@@ -175,7 +177,7 @@ dialog.show()
 
 close.setOnClickListener(new View.OnClickListener(){
 onClick: function(){
-screen.dismiss();
+dialog.dismiss();
 }             
 });
 
