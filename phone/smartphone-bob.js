@@ -395,7 +395,7 @@ gamesettings()
 });
 
 settingsbtn.setOnClickListener(new View.OnClickListener(){
-onClick: funtion(){
+onClick: function(){
 phonesettings()
 }             
 });
