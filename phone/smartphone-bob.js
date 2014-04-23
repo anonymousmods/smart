@@ -136,6 +136,7 @@ var screen = new LinearLayout(ctx);
 var scroll = new ScrollView(ctx);
 
 screen.setOrientation(LinearLayout.VERTICAL);
+screen.setBackground(Color.white);
 
 scroll.addView(screen);
 
@@ -452,7 +453,7 @@ var dn = new Button(ctx);
 var sprint = new Button(ctx);
 var heal = new Button(ctx);
 var tmi = new Button(ctx);
-var entmngr = new Button(ctx);
+var kill = new Button(ctx);
 var scroll = new ScrollView(ctx);
 var close = new Button(ctx);
 
@@ -464,8 +465,8 @@ stla.addView(gm);
 stla.addView(dn);
 stla.addView(sprint);
 stla.addView(heal);
+stla.addView(kill);
 stla.addView(tmi);
-stla.addView(entmngr);
 stla.addView(close);
 
 gm.setWidth(LinearLayout.LayoutParams.WRAP_CONTENT);
@@ -483,8 +484,8 @@ heal.setHeight(LinearLayout.LayoutParams.WRAP_CONTENT);
 tmi.setWidth(LinearLayout.LayoutParams.WRAP_CONTENT);
 tmi.setHeight(LinearLayout.LayoutParams.WRAP_CONTENT);
 
-entmngr.setWidth(LinearLayout.LayoutParams.WRAP_CONTENT);
-entmngr.setHeight(LinearLayout.LayoutParams.WRAP_CONTENT);
+kill.setWidth(LinearLayout.LayoutParams.WRAP_CONTENT);
+kill.setHeight(LinearLayout.LayoutParams.WRAP_CONTENT);
 
 close.setWidth(LinearLayout.LayoutParams.WRAP_CONTENT);
 close.setHeight(LinearLayout.LayoutParams.WRAP_CONTENT);
@@ -520,7 +521,7 @@ heal.setText("Heal");
 
 tmi.setText("Too many items");
 
-entmngr.setText("Entity Manager");
+kill.setText("Suicide");
 
 close.setText("Close");
 
@@ -593,9 +594,10 @@ stdi.dismiss();
 }
 });
 
-entmngr.setOnClickListener(new View.OnClickListener(){
+kill.setOnClickListener(new View.OnClickListener(){
 onClick: function(){
 stdi.dismiss();  
+Player.setHealth(0);
 }             
 });
 
