@@ -1182,7 +1182,7 @@ dn.setBackgroundColor(Color.RED);
 sprint.setBackgroundColor(Color.RED);
 heal.setBackgroundColor(Color.RED);
 kill.setBackgroundColor(Color.RED);
-tmi.setBackgroundColor(Color.RED));
+tmi.setBackgroundColor(Color.RED);
 selfie.setBackgroundColor(Color.RED);
 picture.setBackgroundColor(Color.RED);
 id.setBackgroundColor(Color.RED);
