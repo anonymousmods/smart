@@ -440,7 +440,8 @@ phnstdi.show()
 bckclrbtn.setOnClickListener(new View.OnClickListener(){
                 
 onClick:function(){
-                
+
+phnstdi.dismiss();                
 backgroundsetcolor()
                 
 }
@@ -499,6 +500,7 @@ setred.setOnClickListener(new View.OnClickListener({
     
 onClick:function(){
                 
+phnstdi.dismiss();                
 bckgdi.setBackgroundDrawable(new ColorDrawable(Color.RED));
 bckgla.setBackgroundDrawable(new ColorDrawable(Color.RED));
 camdi.setBackgroundDrawable(new ColorDrawable(Color.RED));
@@ -565,7 +567,8 @@ setpink.setBackgroundDrawable(new ColorDrawable(Color.RED));
 setblue.setOnClickListener(new View.OnClickListener({
     
 onClick:function(){
-                
+
+phnstdi.dismiss();                  
 bckgdi.setBackgroundDrawable(new ColorDrawable(Color.BLUE));
 bckgla.setBackgroundDrawable(new ColorDrawable(Color.BLUE));
 camdi.setBackgroundDrawable(new ColorDrawable(Color.BLUE));
@@ -632,7 +635,8 @@ setpink.setBackgroundDrawable(new ColorDrawable(Color.BLUE));
 setwhite.setOnClickListener(new View.OnClickListener({
     
 onClick:function(){
-                
+
+phnstdi.dismiss();  
 bckgdi.setBackgroundDrawable(new ColorDrawable(Color.WHITE));
 bckgla.setBackgroundDrawable(new ColorDrawable(Color.WHITE));
 camdi.setBackgroundDrawable(new ColorDrawable(Color.WHITE));
