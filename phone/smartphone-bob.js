@@ -386,17 +386,20 @@ settings2la.addView(gmsettingsbtn);
 settings2la.addView(settingsbtn);
 
 settings2di.setContentView(settings2la);
+settings2di.setTitle("Settings");
 
 settings2di.show()
 
 gmsettingsbtn.setOnClickListener(new View.OnClickListener(){
 onClick: function(){
+settings2di.dismiss();
 gamesettings()
 }
 });
 
 settingsbtn.setOnClickListener(new View.OnClickListener(){
 onClick: function(){
+settings2di.dismiss();
 phonesettings()
 }             
 });
@@ -426,6 +429,7 @@ phnstla.setOrientation(LinearLayout.VERTICAL);
 phnstla.addView(bckcolor);
 
 phnstdi.setContentView(phnstla);
+phnstdi.setTitle("Phone Settings");
 
 phnstdi.show()
 
