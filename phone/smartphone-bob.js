@@ -365,6 +365,13 @@ print("Cannot open window: "+err+".")
 }
 
 function settings2(){
+
+ctx.runOnUiThread(new Runnable(){                
+
+run:function(){
+
+try{
+
 var gmsettingsbtn = new Button(ctx);
 var settingsbtn = new Button(ctx);
 var settings2la = new LinearLayout(ctx);
@@ -380,7 +387,7 @@ settings2la.addView(settingsbtn);
 
 settings2di.setContentView(settings2la);
 
-//settings2di.show()
+settings2di.show()
 
 gmsettingsbtn.setOnClickListener(new View.OnClickListener(){
 onClick: function(){
@@ -392,6 +399,13 @@ settingsbtn.setOnClickListener(new View.OnClickListener(){
 onClick: function(){
 phonesettings()
 }             
+});
+
+}catch(e){
+print("Error: " + e);                
+}
+
+}
 });
 
 }
