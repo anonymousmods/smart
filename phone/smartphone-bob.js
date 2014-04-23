@@ -1,3 +1,11 @@
+//This mod is Marshal Bob's property... It is hhs ofcouse he couldn't have done it without the great help from Arjay07 and also from MCKing 82
+//The only 4 who are allowed to redistribute this mod are Marshal Bob and Tom Bailey... And ofcourse MCKing82 and Arjay07 
+//Thanks for Arjay07 for he allowed me to use his TooManyItems mod... Without mentioning the help with answering my questions and completing some codes
+//Thanks for MCKing 82 for helping me a lot and giving me ideas too... MCKing 82 had the idea of adding people to contacts by commands and punching them and also he gave me the idea of sharing items and of teleporting to them... and not to mention his help with the code
+//Thanks for Tom Bailey for being soo grateful with me and testing the mod inaddition to distributing the mod which is awesome and helped me even in my YouTube Channel
+//Thanks for Lambo and Connor4898 for helping me with some questions about ModPE
+//Thanks for the tutorials that Arjay07 did on YouTube which helped me with learning Java for ModPE
+//This document is Copyright (2014) of Marshal Bob (referred to as "The Owner") and is the intellectual property of The Owner. Only Minecraftforum.net is able to host any of The Owner's material without the consent of The Owner. It may not be placed on any other web site or otherwise distributed publicly without advance written permission. (Electronic mail is acceptable as long as you wait for a response.)  (my email for asking permission : nizar.mah99@gmail.com) Not any download link should be made... USE MY OWN DOWNLOAD LINK... IF VIDEO IS MADE THE MAKER (ME) OF THE MOD SHOULD BE STATED... you are not allowed to use any of my script except with permission ask or email me
 var Runnable = java.lang.Runnable;
 var PopupWindow = android.widget.PopupWindow;
 var Button = android.widget.Button; 
