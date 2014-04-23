@@ -380,7 +380,7 @@ var settings2di = new Dialog(ctx);
 gmsettingsbtn.setText("Game Settings");
 settingsbtn.setText("Phone Settings");
 
-settingsla.setOrientation(LinearLayout.VERTICAL);
+settings2la.setOrientation(LinearLayout.VERTICAL);
 
 settings2la.addView(gmsettingsbtn);
 settings2la.addView(settingsbtn);
