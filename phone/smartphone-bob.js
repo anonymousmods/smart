@@ -420,33 +420,15 @@ run:function(){
 
 try{
                 
-var bckcolor = new Button(ctx);
 var phnstla = new LinearLayout(ctx);
 var phnstdi = new Dialog(ctx);
 
 phnstla.setOrientation(LinearLayout.VERTICAL);
 
-phnstla.addView(bckcolor);
-
 phnstdi.setContentView(phnstla);
 phnstdi.setTitle("Phone Settings");
 
 phnstdi.show()
-
-bckcolor.setOnClickListener(new View.OnClickListener(){
-                
-onClick: function(){
-                
-dialog.getContentPane().setBackground(Color.red);
-screen.getContentPane().setBackground(Color.red);
-pplshow.getContentPane().setBackground(Color.red);
-stdi.getContentPane().setBackground(Color.red);
-phnstdi.getContentPane().setBackground(Color.red);
-camdi.getContentPane().setBackground(Color.red);
-               
-}
-                
-});
 
 }catch(e){
                 
