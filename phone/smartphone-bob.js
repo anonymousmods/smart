@@ -29,7 +29,8 @@ var Dialog = android.app.Dialog;
 var ScrollView = android.widget.ScrollView;
 var EditText = Widget.EditText;
 var ImageView = android.widget.ImageView;
-var Color = java.awt.Color;
+var Color = android.graphics.Color;
+var ColorDrawable = android.graphics.drawable.ColorDrawable;
 var number = android.text.InputType.TYPE_CLASS_NUMBER;
 
 var phone;
@@ -54,7 +55,7 @@ var personname;
 var prsnx;
 var prsny;
 var prsnz;
-var URL = "http://www.google.com" ;
+var URL = "http://www.google.com";
 var rotation = 0;
 
 var GUI = new Widget.PopupWindow();
@@ -137,7 +138,7 @@ var screen = new LinearLayout(ctx);
 var scroll = new ScrollView(ctx);
 
 screen.setOrientation(LinearLayout.VERTICAL);
-screen.setBackground(Color.white);
+screen.setBackgroundDrawable(new ColorDrawable(Color.WHITE));
 
 scroll.addView(screen);
 
