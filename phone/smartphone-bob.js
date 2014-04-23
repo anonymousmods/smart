@@ -29,6 +29,7 @@ var Dialog = android.app.Dialog;
 var ScrollView = android.widget.ScrollView;
 var EditText = Widget.EditText;
 var ImageView = android.widget.ImageView;
+var Color = java.awt.Color;
 var number = android.text.InputType.TYPE_CLASS_NUMBER;
 
 var phone;
