@@ -637,13 +637,11 @@ ModPE.takeScreenshot("Photo");
 clientMessage("Photo Taken");
 }
 
-function useItem(x, y, z, itemId, blockId){
-if(itemId==511){
 function takeselfie(){
+if(itemId==511){
 setRot(getPlayerEnt(), getYaw(getPlayerEnt())+170, getPitch(getPlayerEnt()));
 rotation = 1;
-}
-}
+}               
 }
 
 function tmion(){
