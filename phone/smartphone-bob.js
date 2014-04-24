@@ -572,20 +572,20 @@ red.setText("Red");
 blue.setText("Blue");
 
 white.setText("White");
-white.setTextColor(Color.BLACK);
+//white.setTextColor(Color.BLACK);
 
 black.setText("Black");
 
 cyan.setText("Cyan");
-cyan.setTextColor(Color.BLACK);
+//cyan.setTextColor(Color.BLACK);
 
 green.setText("Green");
-green.setTextColor(Color.BLACK);
+//green.setTextColor(Color.BLACK);
 
 magenta.setText("Pink");
 
 yellow.setText("Yellow");
-yellow.setTextColor(Color.BLACK);
+//yellow.setTextColor(Color.BLACK);
 
 bckgddi.setContentView(scroll);
 bckgddi.setTitle("Change Background Color");
