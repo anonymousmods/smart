@@ -6,6 +6,7 @@
 //Thanks for Lambo and Connor4898 for helping me with some questions about ModPE
 //Thanks for the tutorials that Arjay07 did on YouTube which helped me with learning Java for ModPE
 //This document is Copyright (2014) of Marshal Bob (referred to as "The Owner") and is the intellectual property of The Owner. Only Minecraftforum.net is able to host any of The Owner's material without the consent of The Owner. It may not be placed on any other web site or otherwise distributed publicly without advance written permission. (Electronic mail is acceptable as long as you wait for a response.)  (my email for asking permission : nizar.mah99@gmail.com) Not any download link should be made... USE MY OWN DOWNLOAD LINK... IF VIDEO IS MADE THE MAKER (ME) OF THE MOD SHOULD BE STATED... you are not allowed to use any of my script except with permission ask or email me
+
 var Runnable = java.lang.Runnable;
 var PopupWindow = android.widget.PopupWindow;
 var Button = android.widget.Button; 
