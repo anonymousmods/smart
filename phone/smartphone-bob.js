@@ -532,26 +532,40 @@ scroll.addView(bckgdla);
 
 bckgdla.addView(red);
 red.setBackgroundColor(Color.RED);
+red.setWidth(LinearLayout.VERTICAL);
+red.setHeight(LinearLayout.VERTICAL);
 
 bckgdla.addView(blue);
 blue.setBackgroundColor(Color.BLUE);
+blue.setWidth(LinearLayout.VERTICAL);
+blue.setHeight(LinearLayout.VERTICAL);
 
 bckgdla.addView(white);
 white.setBackgroundColor(Color.WHITE);
+white.setHeight(LinearLayout.VERTICAL);
+white.setWidth(LinearLayout.VERTICAL);
 
 bckgdla.addView(black);
 
 bckgdla.addView(green);
 green.setBackgroundColor(Color.GREEN);
+green.setWidth(LinearLayout.VERTICAL);
+green.setHeight(LinearLayout.VERTICAL);
 
 bckgdla.addView(cyan);
 cyan.setBackgroundColor(Color.CYAN);
+cyan.setWidth(LinearLayout.VERTICAL);
+cyan.setHeight(LinearLayout.VERTICAL);
 
 bckgdla.addView(yellow);
 yellow.setBackgroundColor(Color.YELLOW);
+yellow.setWidth(LinearLayout.VERTICAL);
+yellow.setHeight(LinearLayout.VERTICAL);
 
 bckgdla.addView(magenta);
 magenta.setBackgroundColor(Color.MAGENTA);
+magenta.setWidth(LinearLayout.VERTICAL);
+magenta.setHeight(LinearLayout.VERTICAL);
 
 red.setText("Red");
 
