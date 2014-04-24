@@ -522,9 +522,7 @@ var blue = new Button(ctx);
 var cyan = new Button(ctx);
 var green = new Button(ctx);
 var magenta = new Button(ctx);
-var orange = new Button(ctx);
 var yellow = new Button(ctx);
-var pink = new Button(ctx);
 var scroll = new ScrollView(ctx);
 
 bckgdla.setOrientation(LinearLayout.VERTICAL);
@@ -533,42 +531,47 @@ scroll.addView(bckgdla);
 //((ViewGroup)scroll.getParent()).removeView(scroll);
 
 bckgdla.addView(red);
-red.setBackgroundDrawable(new ColorDrawable(Color.RED));
+red.setBackgroundColor(Color.RED);
 
 bckgdla.addView(blue);
-blue.setBackgroundDrawable(new ColorDrawable(Color.BLUE));
+blue.setBackgroundColor(Color.BLUE);
 
 bckgdla.addView(white);
-white.setBackgroundDrawable(new ColorDrawable(Color.WHITE));
+white.setBackgroundColor(Color.WHITE);
 
 bckgdla.addView(black);
 
 bckgdla.addView(green);
-green.setBackgroundDrawable(new ColorDrawable(Color.GREEN));
+green.setBackgroundColor(Color.GREEN);
 
 bckgdla.addView(cyan);
-cyan.setBackgroundDrawable(new ColorDrawable(Color.CYAN));
-
-bckgdla.addView(orange);
+cyan.setBackgroundColor(Color.CYAN);
 
 bckgdla.addView(yellow);
-yellow.setBackgroundDrawable(new ColorDrawable(Color.YELLOW));
+yellow.setBackgroundColor(Color.YELLOW);
 
 bckgdla.addView(magenta);
-magenta.setBackgroundDrawable(new ColorDrawable(Color.MAGENTA));
-
-bckgdla.addView(pink);
+magenta.setBackgroundColor(Color.MAGENTA);
 
 red.setText("Red");
+
 blue.setText("Blue");
+
 white.setText("White");
+white.setTextColor(Color.BLACK);
+
 black.setText("Black");
+
 cyan.setText("Cyan");
+cyan.setTextColor(Color.BLACK);
+
 green.setText("Green");
-magenta.setText("Magenta");
-orange.setText("Orange");
+green.setTextColor(Color.BLACK);
+
+magenta.setText("Pink");
+
 yellow.setText("Yellow");
-pink.setText("Pink");
+yellow.setTextColor(Color.BLACK);
 
 bckgddi.setContentView(scroll);
 bckgddi.setTitle("Change Background Color");
