@@ -1166,15 +1166,7 @@ run:function(){
                 
 try{
 
-dialog.setBackgroundColor(Color.RED);
 layout.setBackgroundColor(Color.RED);
-message.setBackgroudColor(Color.RED);
-call.setBackgroundColor(Color.RED);
-gps.setBackgroundColor(Color.RED);
-maps.setBackgroundColor(Color.RED);
-people.setBackgroundColor(Color.RED);
-camera.setBackgroundColor(Color.RED);
-settings.setBackgroundColor(Color.RED);
                 
 }catch(e){
                 
