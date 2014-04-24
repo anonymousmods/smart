@@ -1,4 +1,4 @@
-//This mod is Marshal Bob's property... It is hhs ofcouse he couldn't have done it without the great help from Arjay07 and also from MCKing 82
+//This mod is Marshal Bob's property... It is his... ofcouse he couldn't have done it without the great help from Arjay07 and also from MCKing 82
 //The only 4 who are allowed to redistribute this mod are Marshal Bob and Tom Bailey... And ofcourse MCKing82 and Arjay07 
 //Thanks for Arjay07 for he allowed me to use his TooManyItems mod... Without mentioning the help with answering my questions and completing some codes
 //Thanks for MCKing 82 for helping me a lot and giving me ideas too... MCKing 82 had the idea of adding people to contacts by commands and punching them and also he gave me the idea of sharing items and of teleporting to them... and not to mention his help with the code
@@ -549,7 +549,7 @@ bckgdla.addView(cyan);
 cyan.setBackgroundDrawable(new ColorDrawable(Color.CYAN));
 
 bckgdla.addView(orange);
-orange.setBackgroundDrawable(new ColorDrawable(Color.ORANGE));
+//orange.setBackgroundDrawable(new ColorDrawable(Color.ORANGE));
 
 bckgdla.addView(yellow);
 yellow.setBackgroundDrawable(new ColorDrawable(Color.YELLOW));
