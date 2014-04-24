@@ -562,7 +562,7 @@ red.setOnClickListener(new View.OnClickListener({
     
 onClick:function(){
                 
-phnstdi.dismiss();                
+backgddi.dismiss();                
 redsetcolor()
 
 }
@@ -573,7 +573,7 @@ blue.setOnClickListener(new View.OnClickListener({
     
 onClick:function(){
 
-phnstdi.dismiss();                  
+backgddi.dismiss();                  
 bluesetcolor()
 
 }
@@ -584,7 +584,7 @@ white.setOnClickListener(new View.OnClickListener({
     
 onClick:function(){
 
-phnstdi.dismiss();  
+backgddi.dismiss();  
 whitesetcolor()
 
 }
