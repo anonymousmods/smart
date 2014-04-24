@@ -1165,18 +1165,12 @@ ctx.runOnUiThread(new Runnable({
 run:function(){
                 
 try{
-                
-bckgdi.setBackgroundColor(Color.RED);
+
 bckgla.setBackgroundColor(Color.RED);
-camdi.setBackgroundColor(Color.RED);
 camla.setBackgroundColor(Color.RED);
-dialog.setBackgroundColor(Color.RED);
 screen.setBackgroundColor(Color.RED);
 pplfrm.setBackgroundColor(Color.RED);
-pplshow.setBackgroundColor(Color.RED);
 stla.setBackgroundColor(Color.RED);
-stdi.setBackgroundColor(Color.RED);
-tmiDialog.setBackgroundColor(Color.RED);
 tmiLayout.setBackgroundColor(Color.RED);
 phnstla.setBackgroundColor(Color.RED);
 phnstdi.setBackgroundColor(Color.RED);
@@ -1194,9 +1188,6 @@ persontag.setBackgroundColor(Color.RED);
 close.setBackgroundColor(Color.RED);
 sendmsg.setBackgroundColor(Color.RED);
 inputmsg.setBackgroundColor(Color.RED);
-promptmsg.setBackgroundColor(Color.RED);
-b.setBackgroundColor(Color.RED);
-a.setBackgroundColor(Color.RED);
 gm.setBackgroundColor(Color.RED);
 dn.setBackgroundColor(Color.RED);
 sprint.setBackgroundColor(Color.RED);
@@ -1210,7 +1201,6 @@ add.setBackgroundColor(Color.RED);
 ref.setBackgroundColor(Color.RED);
 data.setBackgroundColor(Color.RED);
 amount.setBackgroundColor(Color.RED);
-scroll.setBackgroundColor(Color.RED);
 bckclrbtn.setBackgroundColor(Color.RED);
 settingsbtn.setBackgroundColor(Color.RED);
 gmsettingsbtn.setBackgroundColor(Color.RED);
@@ -1219,11 +1209,9 @@ blue.setBackgroundColor(Color.RED);
 cyan.setBackgroundColor(Color.RED);
 white.setBackgroundColor(Color.RED);
 black.setBackgroundColor(Color.RED);
-orange.setBackgroundColor(Color.RED);
 green.setBackgroundColor(Color.RED);
 yellow.setBackgroundColor(Color.RED);
 magenta.setBackgroundColor(Color.RED);
-pink.setBackgroundColor(Color.RED);
                 
 }catch(e){
                 
