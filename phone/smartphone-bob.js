@@ -578,8 +578,7 @@ bckgddi.setTitle("Change Background Color");
 
 bckgddi.show()
 
-red.setOnClickListener(new View.OnClickListener({
-    
+red.setOnClickListener(new View.OnClickListener(){
 onClick:function(){
                 
 screen.setBackgroundColor(Color.RED);
@@ -592,11 +591,10 @@ gps.setBackgroundColor(Color.RED);
 maps.setBackgroundColor(Color.RED);
 settings.setBackgroundColor(Color.RED);
 
-backgddi.dismiss();                
+backgddi.dismiss();   
 
 }
-                
-}));
+});
 
 blue.setOnClickListener(new View.OnClickListener({
     
