@@ -557,7 +557,6 @@ bckgdla.addView(magenta);
 magenta.setBackgroundDrawable(new ColorDrawable(Color.MAGENTA));
 
 bckgdla.addView(pink);
-pink.setBackgroundDrawable(new ColorDrawable(Color.PINK));
 
 red.setText("Red");
 blue.setText("Blue");
