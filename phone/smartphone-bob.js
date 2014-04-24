@@ -549,7 +549,6 @@ bckgdla.addView(cyan);
 cyan.setBackgroundDrawable(new ColorDrawable(Color.CYAN));
 
 bckgdla.addView(orange);
-//orange.setBackgroundDrawable(new ColorDrawable(Color.ORANGE));
 
 bckgdla.addView(yellow);
 yellow.setBackgroundDrawable(new ColorDrawable(Color.YELLOW));
