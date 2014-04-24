@@ -531,39 +531,39 @@ scroll.addView(bckgdla);
 //((ViewGroup)scroll.getParent()).removeView(scroll);
 
 bckgdla.addView(red);
-red.setBackgroundColor(Color.RED);
+//red.setBackgroundColor(Color.RED);
 red.setWidth(LinearLayout.VERTICAL);
 red.setHeight(LinearLayout.VERTICAL);
 
 bckgdla.addView(blue);
-blue.setBackgroundColor(Color.BLUE);
+//blue.setBackgroundColor(Color.BLUE);
 blue.setWidth(LinearLayout.VERTICAL);
 blue.setHeight(LinearLayout.VERTICAL);
 
 bckgdla.addView(white);
-white.setBackgroundColor(Color.WHITE);
+//white.setBackgroundColor(Color.WHITE);
 white.setHeight(LinearLayout.VERTICAL);
 white.setWidth(LinearLayout.VERTICAL);
 
 bckgdla.addView(black);
 
 bckgdla.addView(green);
-green.setBackgroundColor(Color.GREEN);
+//green.setBackgroundColor(Color.GREEN);
 green.setWidth(LinearLayout.VERTICAL);
 green.setHeight(LinearLayout.VERTICAL);
 
 bckgdla.addView(cyan);
-cyan.setBackgroundColor(Color.CYAN);
+//cyan.setBackgroundColor(Color.CYAN);
 cyan.setWidth(LinearLayout.VERTICAL);
 cyan.setHeight(LinearLayout.VERTICAL);
 
 bckgdla.addView(yellow);
-yellow.setBackgroundColor(Color.YELLOW);
+//yellow.setBackgroundColor(Color.YELLOW);
 yellow.setWidth(LinearLayout.VERTICAL);
 yellow.setHeight(LinearLayout.VERTICAL);
 
 bckgdla.addView(magenta);
-magenta.setBackgroundColor(Color.MAGENTA);
+//magenta.setBackgroundColor(Color.MAGENTA);
 magenta.setWidth(LinearLayout.VERTICAL);
 magenta.setHeight(LinearLayout.VERTICAL);
 
@@ -591,40 +591,6 @@ bckgddi.setContentView(scroll);
 bckgddi.setTitle("Change Background Color");
 
 bckgddi.show()
-
-red.setOnClickListener(new View.OnClickListener(){
-onClick:function(){
-                
-screen.setBackgroundDrawable(new ColorDrawable(Color.RED));
-
-backgddi.dismiss();   
-
-}
-});
-
-blue.setOnClickListener(new View.OnClickListener({
-    
-onClick:function(){
-
-backgddi.dismiss();                  
-bluesetcolor()
-
-}
-                
-}));
-
-white.setOnClickListener(new View.OnClickListener({
-    
-onClick:function(){
-
-backgddi.dismiss();  
-whitesetcolor()
-
-}
-                
-}));
-
-
                 
 }catch(e){
                 
