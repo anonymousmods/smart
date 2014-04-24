@@ -581,15 +581,7 @@ bckgddi.show()
 red.setOnClickListener(new View.OnClickListener(){
 onClick:function(){
                 
-screen.setBackgroundColor(Color.RED);
-dialog.setBackgroundColor(Color.RED);
-message.setBackgroundColor(Color.RED);
-call.setBackgroundColor(Color.RED);
-people.setBackgroundColor(Color.RED);
-camera.setBackgroundColor(Color.RED);
-gps.setBackgroundColor(Color.RED);
-maps.setBackgroundColor(Color.RED);
-settings.setBackgroundColor(Color.RED);
+screen.setBackgroundDrawable(new ColorDrawable(Color.RED));
 
 backgddi.dismiss();   
 
