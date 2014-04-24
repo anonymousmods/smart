@@ -518,12 +518,12 @@ var white = new Button(ctx);
 var black = new Button(ctx);
 var red = new Button(ctx);
 var blue = new Button(ctx);
-var aqua = new Button(ctx);
+var cyan = new Button(ctx);
 var green = new Button(ctx);
-var dpurple = new Button(ctx);
-var gold = new Button(ctx);
+var magenta = new Button(ctx);
+var orange = new Button(ctx);
 var yellow = new Button(ctx);
-var lpurple = new Button(ctx);
+var pink = new Button(ctx);
 var scroll = new ScrollView(ctx);
 
 bckgdla.setOrientation(LinearLayout.VERTICAL);
@@ -545,31 +545,31 @@ bckgdla.addView(black);
 bckgdla.addView(green);
 green.setBackgroundDrawable(new ColorDrawable(Color.GREEN));
 
-bckgdla.addView(aqua);
-aqua.setBackgroundDrawable(new ColorDrawable(Color.AQUA));
+bckgdla.addView(cyan);
+cyan.setBackgroundDrawable(new ColorDrawable(Color.CYAN));
 
-bckgdla.addView(gold);
-gold.setBackgroundDrawable(new ColorDrawable(Color.GOLD));
+bckgdla.addView(orange);
+orange.setBackgroundDrawable(new ColorDrawable(Color.ORANGE));
 
 bckgdla.addView(yellow);
 yellow.setBackgroundDrawable(new ColorDrawable(Color.YELLOW));
 
-bckgdla.addView(dpurple);
-dpurple.setBackgroundDrawable(new ColorDrawable(Color.DARK_PURPLE));
+bckgdla.addView(magenta);
+magenta.setBackgroundDrawable(new ColorDrawable(Color.MAGENTA));
 
-bckgdla.addView(lpurple);
-lpurple.setBackgroundDrawable(new ColorDrawable(Color.LIGHT_PURPLE));
+bckgdla.addView(pink);
+pink.setBackgroundDrawable(new ColorDrawable(Color.PINK));
 
 red.setText("Red");
 blue.setText("Blue");
 white.setText("White");
 black.setText("Black");
-aqua.setText("Aqua");
+cyan.setText("Cyan");
 green.setText("Green");
-dpurple.setText("Dark Purple");
-gold.setText("Gold");
+magenta.setText("Magenta");
+orange.setText("Orange");
 yellow.setText("Yellow");
-lpurple.setText("Light Purple");
+pink.setText("Pink");
 
 bckgddi.setContentView(scroll);
 bckgddi.setTitle("Change Background Color");
@@ -1214,14 +1214,14 @@ settingsbtn.setBackgroundColor(Color.RED);
 gmsettingsbtn.setBackgroundColor(Color.RED);
 red.setBackgroundColor(Color.RED);
 blue.setBackgroundColor(Color.RED);
-aqua.setBackgroundColor(Color.RED);
+cyan.setBackgroundColor(Color.RED);
 white.setBackgroundColor(Color.RED);
 black.setBackgroundColor(Color.RED);
-gold.setBackgroundColor(Color.RED);
+orange.setBackgroundColor(Color.RED);
 green.setBackgroundColor(Color.RED);
 yellow.setBackgroundColor(Color.RED);
-dpurple.setBackgroundColor(Color.RED);
-lpurple.setBackgroundColor(Color.RED);
+magenta.setBackgroundColor(Color.RED);
+pink.setBackgroundColor(Color.RED);
                 
 }catch(e){
                 
@@ -1293,14 +1293,14 @@ settingsbtn.setBackgroundDrawable(new ColorDrawable(Color.BLUE));
 gmsettingsbtn.setBackgroundDrawable(new ColorDrawable(Color.BLUE));
 red.setBackgroundDrawable(new ColorDrawable(Color.BLUE));
 blue.setBackgroundDrawable(new ColorDrawable(Color.BLUE));
-aqua.setBackgroundDrawable(new ColorDrawable(Color.BLUE));
+cyan.setBackgroundDrawable(new ColorDrawable(Color.BLUE));
 white.setBackgroundDrawable(new ColorDrawable(Color.BLUE));
 black.setBackgroundDrawable(new ColorDrawable(Color.BLUE));
-gold.setBackgroundDrawable(new ColorDrawable(Color.BLUE));
+orange.setBackgroundDrawable(new ColorDrawable(Color.BLUE));
 green.setBackgroundDrawable(new ColorDrawable(Color.BLUE));
 yellow.setBackgroundDrawable(new ColorDrawable(Color.BLUE));
-dpurple.setBackgroundDrawable(new ColorDrawable(Color.BLUE));
-lpurple.setBackgroundDrawable(new ColorDrawable(Color.BLUE));
+magenta.setBackgroundDrawable(new ColorDrawable(Color.BLUE));
+pink.setBackgroundDrawable(new ColorDrawable(Color.BLUE));
 
 }catch(e){
                 
@@ -1372,14 +1372,14 @@ settingsbtn.setBackgroundDrawable(new ColorDrawable(Color.WHITE));
 gmsettingsbtn.setBackgroundDrawable(new ColorDrawable(Color.WHITE));
 red.setBackgroundDrawable(new ColorDrawable(Color.WHITE));
 blue.setBackgroundDrawable(new ColorDrawable(Color.WHITE));
-aqua.setBackgroundDrawable(new ColorDrawable(Color.WHITE));
+cyan.setBackgroundDrawable(new ColorDrawable(Color.WHITE));
 white.setBackgroundDrawable(new ColorDrawable(Color.WHITE));
 black.setBackgroundDrawable(new ColorDrawable(Color.WHITE));
-gold.setBackgroundDrawable(new ColorDrawable(Color.WHITE));
+orange.setBackgroundDrawable(new ColorDrawable(Color.WHITE));
 green.setBackgroundDrawable(new ColorDrawable(Color.WHITE));
 yellow.setBackgroundDrawable(new ColorDrawable(Color.WHITE));
-dpurple.setBackgroundDrawable(new ColorDrawable(Color.WHITE));
-lpurple.setBackgroundDrawable(new ColorDrawable(Color.WHITE));
+magenta.setBackgroundDrawable(new ColorDrawable(Color.WHITE));
+pink.setBackgroundDrawable(new ColorDrawable(Color.WHITE));
 
 }catch(e){
                 
