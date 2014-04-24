@@ -532,32 +532,33 @@ scroll.addView(bckgdla);
 //((ViewGroup)scroll.getParent()).removeView(scroll);
 
 bckgdla.addView(red);
-red.setBackgroundDrawable(new ColorDrawable(Color.RED);
+red.setBackgroundDrawable(new ColorDrawable(Color.RED));
 
 bckgdla.addView(blue);
-blue.setBackgroundDrawable(new ColorDrawable(Color.BLUE);
+blue.setBackgroundDrawable(new ColorDrawable(Color.BLUE));
 
 bckgdla.addView(white);
-white.setBackgroundDrawable(new ColorDrawable(Color.WHITE);
+white.setBackgroundDrawable(new ColorDrawable(Color.WHITE));
 
 bckgdla.addView(black);
 
 bckgdla.addView(green);
-green.setBackgroundDrawable(new ColorDrawable(Color.GREEN);
+green.setBackgroundDrawable(new ColorDrawable(Color.GREEN));
+
 bckgdla.addView(aqua);
-aqua.setBackgroundDrawable(new ColorDrawable(Color.AQUA);
+aqua.setBackgroundDrawable(new ColorDrawable(Color.AQUA));
 
 bckgdla.addView(gold);
-gold.setBackgroundDrawable(new ColorDrawable(Color.GOLD);
+gold.setBackgroundDrawable(new ColorDrawable(Color.GOLD));
 
 bckgdla.addView(yellow);
-yellow.setBackgroundDrawable(new ColorDrawable(Color.YELLOW);
+yellow.setBackgroundDrawable(new ColorDrawable(Color.YELLOW));
 
 bckgdla.addView(dpurple);
-dpurple.setBackgroundDrawable(new ColorDrawable(Color.DARK_PURPLE);
+dpurple.setBackgroundDrawable(new ColorDrawable(Color.DARK_PURPLE));
 
 bckgdla.addView(lpurple);
-lpurple.setBackgroundDrawable(new ColorDrawable(Color.LIGHT_PURPLE);
+lpurple.setBackgroundDrawable(new ColorDrawable(Color.LIGHT_PURPLE));
 
 red.setText("Red");
 blue.setText("Blue");
