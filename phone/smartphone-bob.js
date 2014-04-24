@@ -1160,23 +1160,7 @@ return null;
 
 function redsetcolor(){
 
-ctx.runOnUiThread(new Runnable({
-
-run:function(){
-                
-try{
-
 layout.setBackgroundColor(Color.RED);
-                
-}catch(e){
-                
-print("Error: " + e);
-                
-}
-                
-}
-
-}));
 
 }
 
