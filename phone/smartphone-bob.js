@@ -994,11 +994,11 @@ print("Error: " + e);
 });
 }
 
-function procCmd(command){
+function procCmd(cmd){
                 
-var cmd = command.split(" ");
-var myCommand = "command"; 
-if(cmd[0] == myCommand) {  
+var p = cmd.split(" ");
+var command = p[0]; 
+switch(command.toLowerCase()) {  
                 
 case 'list' : {
                 
