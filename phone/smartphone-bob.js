@@ -591,6 +591,14 @@ bckgddi.setContentView(scroll);
 bckgddi.setTitle("Change Background Color");
 
 bckgddi.show()
+
+red.setOnClickListener(new View.OnClickListener({
+onClick:function(){
+                
+screen.setBackgroundDrawable(new ColorDrawable(Color.RED));
+                
+}                
+}));
                 
 }catch(e){
                 
@@ -856,69 +864,6 @@ prsnz = Entity.getZ(victim);
 }
 }
 
-function peopleon(){
-
-ctx.runOnUiThread(new Runnable(){
-run: function(){
-try{
-var close = new Button(ctx);
-var pplfrm = new LinearLayout(ctx);
-var pplshow = new Dialog(ctx);
-var persontag = new Button(ctx);
-var scroll = new ScrollView(ctx);
-
-pplfrm.setOrientation(LinearLayout.VERTICAL);
-pplfrm.setBackgroundDrawable(null);
-
-pplfrm.addView(persontag);
-pplfrm.addView(close);
-
-scroll.addView(pplfrm);
-
-pplshow.setTitle("People You Know");
-pplshow.setContentView(scroll);
-pplshow.show()
-
-if(Player.isPlayer(person)){
-pplfrm.addView(persontag);
-}
-
-persontag.setText("" + Server.getAllPlayerNames());
-close.setText("Close");
-
-persontag.setOnClickListener(new View.OnClickListener(){
-onClick: function(){
-teleport()
-}
-});
-
-close.setOnClickListener(new View.OnClickListener(){
-onClick: function(){
-pplshow.dismiss();
-}             
-});
-
-} catch(e){
-print("Error: " + e);
-}
-}
-});
-}
-
-function teleport(){
-
-ctx.runOnUiThread(new Runnable(){
-run: function(){
-try{
-setPosition(Player.getEntity(), prsnx, prsny, prsnz);
-clientMessage("Teleported " + getOptionAttr("mp_username") + " to " + personname);
-} catch(e){
-print("Error: " + e);
-}
-}
-});
-}
-
 function takephoto(){
 ModPE.takeScreenshot("Photo");
 clientMessage("Photo Taken");
@@ -1049,6 +994,28 @@ print("Error: " + e);
 });
 }
 
+function procCmd(command
+                
+var cmd = command.split(" ");
+var myCommand = "command"; //Change the string to whatever you want! :D
+if(cmd[0] == myCommand) {  
+                
+case 'list' : {
+                
+clientMessage("" + Server.getAllPlayerNames());
+                
+}
+
+}
+               
+}
+
+function peopleon(){
+                
+if()
+                
+}
+
 function modTick(){
 
 if(rotation==1){
@@ -1136,6 +1103,7 @@ return null;
 }
 
 }
+
 
 
 
