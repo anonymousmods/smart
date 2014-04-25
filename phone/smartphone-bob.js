@@ -1012,7 +1012,7 @@ clientMessage("" + Server.getAllPlayerNames());
 
 function peopleon(){
                 
-if()
+
                 
 }
 
