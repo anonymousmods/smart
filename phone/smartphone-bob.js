@@ -105,6 +105,7 @@ var prsny;
 var prsnz;
 var URL = "http://www.google.com";
 var rotation = 0;
+var contact1;
 
 var GUI = new Widget.PopupWindow();
 
@@ -213,7 +214,7 @@ map.setText("Maps");
 gps.setText("GPS"); 
 close.setText("Close");
             
-screen.addView(message);
+//screen.addView(message);
 //screen.addView(call);
 screen.addView(people);
 screen.addView(camera);
@@ -996,6 +997,18 @@ print("Error: " + e);
 });
 }
 
+function entityAddedHook(entity){
+
+if(Player.isPlayer(entity)){
+                
+Entity.getNameTag(entity);
+
+clientMessage("" + entity + " has been added to contacts");
+
+contact1 = entity;
+                
+}
+
 function procCmd(cmd){
                 
 var p = cmd.split(" ");
@@ -1004,9 +1017,7 @@ switch(command.toLowerCase()) {
                 
 case 'list' : {
                 
-var players = Server.getAllPlayers();
-
-clientMessage("" + players);
+clientMessage("" + contact1);
                 
 }
 
