@@ -274,13 +274,15 @@ inputmsg.setHeight(LinearLayout.LayoutParams.WRAP_CONTENT);
 
 promptmsg.show()
 dialog.dismiss();
+
 sendmsg.setOnClickListener(new View.OnClickListener(){
 onClick: function(){
 var playername = Player.getName(Player.getEntity());
-Server.sendChat("<"+playername+"> "+ inputmsg.getText());
+ModPE.sendChat("<"+playername+"> "+ inputmsg.getText());
 promptmsg.dismiss();
 }
 });
+
 }
 });
 
@@ -1002,7 +1004,9 @@ switch(command.toLowerCase()) {
                 
 case 'list' : {
                 
-clientMessage("" + Server.getAllPlayerNames());
+var players = Server.getAllPlayers();
+
+clientMessage("" + players);
                 
 }
 
