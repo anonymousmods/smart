@@ -1006,6 +1006,8 @@ Entity.getNameTag(entity);
 clientMessage("" + entity + " has been added to contacts");
 
 contact1 = entity;
+
+}
                 
 }
 
