@@ -999,9 +999,9 @@ print("Error: " + e);
 
 function entityAddedHook(entity){
 
-if(Player.isPlayer(entity)){
+if(Player.isPlayer(entity) && Entity.getRenderType(entity)==3){
                 
-Entity.getNameTag(entity);
+contact1name = Entity.getNameTag(entity);
 
 clientMessage("" + entity + " has been added to contacts");
 
@@ -1028,10 +1028,36 @@ clientMessage("" + contact1);
 }
 
 function peopleon(){
-                
 
-                
+ctx.runOnUiThread(new Runnable(){
+run: function(){
+try{
+var pplfrm = new LinearLayout(ctx);
+var pplshow = new Dialog(ctx);
+var persontag = new Button(ctx);
+var scroll = ScrollView(ctx);
+
+pplfrm.setOrientation(LinearLayout.VERTICAL);
+pplfrm.setBackgroundDrawable(null);
+
+pplfrm.addView(persontag);
+
+scroll.addView(pplfrm);
+
+pplshow.setTitle("People You Know");
+pplshow.setContentView(scroll);
+pplshow.show()
+
+
+persontag.setText("" + contact1name);
+
+} catch(e){
+print("Error: " + e);
 }
+}
+});
+}
+
 
 function modTick(){
 
