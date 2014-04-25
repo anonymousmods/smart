@@ -213,7 +213,7 @@ map.setText("Maps");
 gps.setText("GPS"); 
 close.setText("Close");
             
-//screen.addView(message);
+screen.addView(message);
 //screen.addView(call);
 screen.addView(people);
 screen.addView(camera);
@@ -277,7 +277,7 @@ dialog.dismiss();
 sendmsg.setOnClickListener(new View.OnClickListener(){
 onClick: function(){
 var playername = Player.getName(Player.getEntity());
-clientMessage("<"+playername+"> "+ inputmsg.getText());
+Server.sendChat("<"+playername+"> "+ inputmsg.getText());
 promptmsg.dismiss();
 }
 });
@@ -595,7 +595,7 @@ bckgddi.show()
 red.setOnClickListener(new View.OnClickListener({
 onClick:function(){
                 
-screen.setBackgroundDrawable(new ColorDrawable(Color.RED));
+screen.setBackgroundColor(Color.RED);
                 
 }                
 }));
