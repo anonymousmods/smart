@@ -106,6 +106,7 @@ var prsnz;
 var URL = "http://www.google.com";
 var rotation = 0;
 var contact1;
+var contact1name;
 
 var GUI = new Widget.PopupWindow();
 
