@@ -994,10 +994,10 @@ print("Error: " + e);
 });
 }
 
-function procCmd(command
+function procCmd(command){
                 
 var cmd = command.split(" ");
-var myCommand = "command"; //Change the string to whatever you want! :D
+var myCommand = "command"; 
 if(cmd[0] == myCommand) {  
                 
 case 'list' : {
