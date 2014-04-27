@@ -749,13 +749,13 @@ bckgddi.setTitle("Change Background Color");
 
 bckgddi.show()
 
-red.setOnClickListener(new View.OnClickListener({
+/*red.setOnClickListener(new View.OnClickListener({
 onClick:function(){
                 
 screen.setBackgroundColor(Color.RED);
                 
 }                
-}));
+}));*/
                 
 }catch(e){
                 
