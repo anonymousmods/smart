@@ -2,6 +2,7 @@
 //The only 4 who are allowed to redistribute this mod are Marshal Bob and Tom Bailey... And ofcourse MCKing82 and Arjay07 
 //Thanks for Arjay07 for he allowed me to use his TooManyItems mod... Without mentioning the help with answering my questions and completing some codes
 //Thanks for MCKing 82 for helping me a lot and giving me ideas too... MCKing 82 had the idea of adding people to contacts by commands and punching them and also he gave me the idea of sharing items and of teleporting to them... and not to mention his help with the code
+//Thanks for zhuowei for helping me a lot by answering questions and helping me with a timing function
 //Thanks for Tom Bailey for being soo grateful with me and testing the mod inaddition to distributing the mod which is awesome and helped me even in my YouTube Channel
 //Thanks for Lambo and Connor4898 for helping me with some questions about ModPE
 //Thanks for the tutorials that Arjay07 did on YouTube which helped me with learning Java for ModPE
@@ -34,6 +35,7 @@ var Color = android.graphics.Color;
 var ColorDrawable = android.graphics.drawable.ColorDrawable;
 var number = android.text.InputType.TYPE_CLASS_NUMBER;
 
+var shotsleft=0;
 var dialog;
 var bckgdi;
 var bckgla;
@@ -107,6 +109,15 @@ var URL = "http://www.google.com";
 var rotation = 0;
 var contact1;
 var contact1name;
+var countdown = 500; 
+var time_timers = []; 
+var time_nextId = 0;
+var tmiwid;
+var gmwid;
+var sprintwid;
+var dnwid;
+var healwid; 
+var killwid;
 
 var GUI = new Widget.PopupWindow();
 
@@ -179,6 +190,50 @@ print("Error: " + e);
 });
 }
 
+function setTimeout(func, ticks) { 
+var id = time_nextId++; 
+time_timers.push([id, ticks, func, -1]); 	
+return id; 
+}
+
+
+function setInterval(func, ticks) {
+var id = time_nextId++; 	
+time_timers.push([id, ticks, func, ticks]); 	
+return id; 
+} 
+
+function clearTimeout(id) {
+for (var i = time_timers.length - 1; 
+i >= 0; --i) { 		
+var t = time_timers[i]; 		
+if (t[0] == id) { 			
+time_timers.splice(i, 1); 			
+break; 		
+} 	
+} 
+} 
+
+function clearInterval(id) { 	
+clearTimeout(id); 
+} 
+
+function time_runTimers() { 	
+for (var i = time_timers.length - 1; 
+i >= 0; --i) { 		
+var t = time_timers[i]; 		
+t[1]--; 		
+if (t[1] == 0) { 			
+t[2](); 			
+if (t[3] == -1) { 				
+time_timers.splice(i, 1); 			
+} else { 				
+t[1] = t[3]; 			
+} 		
+} 	
+} 
+}
+
 function phonemenu(){
 ctx.runOnUiThread(new Runnable(){
 run: function(){
@@ -204,6 +259,15 @@ var settings = new Button(ctx);
 var map = new Button(ctx);
 var gps = new Button(ctx);
 var close = new Button(ctx);
+
+var tmiwid = new Button(ctx);
+var gmwid = new Button(ctx);
+var sprintwid = new Button(ctx);
+var healwid = new Button(ctx);
+var killwid = new Button(ctx);
+var dnwid = new Button(ctx);
+
+var menula = new LinearLayout(ctx);
                 
 message.setText("Message");
 call.setText("Phone");
@@ -217,19 +281,109 @@ close.setText("Close");
             
 //screen.addView(message);
 //screen.addView(call);
-screen.addView(people);
+//screen.addView(people);
 screen.addView(camera);
-screen.addView(gps);
-screen.addView(map);
+//screen.addView(gps);
+//screen.addView(map);
 screen.addView(browser);
 screen.addView(settings);
 screen.addView(close);
-        
+
+menula.addView(dnwid);
+menula.addView(healwid);
+menula.addView(sprintwid);
+menula.addView(gmwid);
+
+if(Level.getGameMode()==0){
+gmwid.setText("Survival");
+} else if(Level.getGameMode()==1){
+gmwid.setText("Creative");
+}
+
+var ltime = Level.getTime()-Math.floor(Level.getTime()/19200)*19200;
+day = ltime < (19200/2);
+night = day?0:8280;
+
+if(day){
+dnwid.setText("Day");
+} else {
+dnwid.setText("Night");
+}
+
+if(onrun==false){
+sprintwid.setText("Sprint Off");
+} else if(onrun==true){
+sprintwid.setText("Sprint On");
+}
+
+healwid.setText("Heal");
+
+if(Level.getGameMode()==0){
+gmwid.setOnClickListener(new View.OnClickListener(){
+onClick: function(){
+Level.setGameMode(1);
+clientMessage("GameMode set to Creative");
+}
+});
+} else if(Level.getGameMode()==1){
+gmwid.setOnClickListener(new View.OnClickListener(){
+onClick: function(){
+Level.setGameMode(0);
+clientMessage("GameMode set to Survival");
+}
+});
+}
+
+if(day){
+dnwid.setOnClickListener(new View.OnClickListener(){
+onClick: function(){
+clientMessage("Time set to Night");
+Level.setTime(14000);
+}
+});
+} else if(!day){
+dnwid.setOnClickListener(new View.OnClickListener(){
+onClick: function(){
+clientMessage("Time set to Day");
+Level.setTime(0);
+}
+});
+}
+
+if(onrun==false){
+sprintwid.setOnClickListener(new View.OnClickListener(){
+onClick: function(){
+clientMessage("Sprinting on");
+onrun=true;
+}
+});
+} else if(onrun==true){
+sprintwid.setOnClickListener(new View.OnClickListener(){
+onClick: function(){
+onrun=false;
+clientMessage("Sprinting off");
+}
+});
+}
+
+healwid.setOnClickListener(new View.OnClickListener(){
+onClick: function() {
+Player.setHealth(20);
+clientMessage("Fully Healed");
+}
+});
+
+//var menudi = new PopupWindow(menula, -1, -1);
+  
+//menudi.showAtLocation(ctx.getWindow().getDecorView(), Gravity.LEFT | Gravity.TOP, 0, 0);
+
+      
 dialog.show()
 
 close.setOnClickListener(new View.OnClickListener(){
 onClick: function(){
 dialog.dismiss();
+menudi.dismiss();
 }             
 });
 
@@ -279,8 +433,7 @@ dialog.dismiss();
 
 sendmsg.setOnClickListener(new View.OnClickListener(){
 onClick: function(){
-var playername = Player.getName(Player.getEntity());
-ModPE.sendChat("<"+playername+"> "+ inputmsg.getText());
+sendmessage()
 promptmsg.dismiss();
 }
 });
@@ -802,6 +955,7 @@ var camdi = new Dialog(ctx);
 var selfie = new Button(ctx);
 var picture = new Button(ctx);
 var close = new Button(ctx);
+var back = new Button(ctx);
 var scroll = new ScrollView(ctx);
 
 camdi.setTitle("Camera");
@@ -809,6 +963,7 @@ camla.setOrientation(LinearLayout.VERTICAL);
 
 camla.addView(selfie);
 camla.addView(picture);
+//camla.addView(back);
 camla.addView(close);
 
 scroll.addView(camla);
@@ -816,15 +971,19 @@ scroll.addView(camla);
 selfie.setText("Selfie");
 picture.setText("Picture");
 close.setText("Close");
+back.setText("←");
 
 selfie.setWidth(LinearLayout.LayoutParams.WRAP_CONTENT);
 selfie.setHeight(LinearLayout.LayoutParams.WRAP_CONTENT);
 
 picture.setWidth(LinearLayout.LayoutParams.WRAP_CONTENT);
-picture.setWidth(LinearLayout.LayoutParams.WRAP_CONTENT);
+picture.setHeight (LinearLayout.LayoutParams.WRAP_CONTENT);
 
 close.setWidth(LinearLayout.LayoutParams.WRAP_CONTENT);
-close.setWidth(LinearLayout.LayoutParams.WRAP_CONTENT);
+close.setHeight(LinearLayout.LayoutParams.WRAP_CONTENT);
+
+back.setWidth(LinearLayout.LayoutParams.WRAP_CONTENT);
+back.setHeight(LinearLayout.LayoutParams.WRAP_CONTENT);
 
 camdi.setContentView(scroll);
 camdi.show()
@@ -881,6 +1040,7 @@ function useItem(x, y, z, itemId, blockId, side){
 if(itemId==511){
 setRot(getPlayerEnt(), getYaw(getPlayerEnt())+170, getPitch(getPlayerEnt()));
 rotation = 1;
+shotsleft=3;
 }               
 }
 
@@ -998,11 +1158,11 @@ print("Error: " + e);
 });
 }
 
-function entityAddedHook(entity){
+function attackHook(attacker, victim){
 
 if(Player.isPlayer(entity) && Entity.getRenderType(entity)==3){
                 
-contact1name = Entity.getNameTag(entity);
+contact1name = Player.getName(entity);
 
 clientMessage("" + entity + " has been added to contacts");
 
@@ -1020,7 +1180,7 @@ switch(command.toLowerCase()) {
                 
 case 'list' : {
                 
-clientMessage("" + contact1);
+clientMessage("" + contact1name);
                 
 }
 
@@ -1059,8 +1219,16 @@ print("Error: " + e);
 });
 }
 
+function chatReceiveHook(sender, message){
+
+sendChat(Player.getName(Player.getEntity()), inputmsg.getText());
+
+}
+
 
 function modTick(){
+
+time_runTimers();
 
 if(rotation==1){
 //setRot(getPlayerEnt(), getYaw(getPlayerEnt())+170, getPitch(getPlayerEnt()));
@@ -1078,9 +1246,13 @@ rotation=5;
 }
 if(rotation==5){
 //setRot(getPlayerEnt(), getYaw(getPlayerEnt())+170, getPitch(getPlayerEnt()));
-clientMessage("Selfie Taken");
-rotation = 0;
+//clientMessage("I guess I took a good selfie");
+rotation=6;
+}
+if(rotation==6){
+rotation=0;
 ModPE.takeScreenshot("Selfie");
+takeScreenshotRepeatedly();
 }
 
 if(getCarriedItem()==511 || Level.getGameMode()==1){
@@ -1117,10 +1289,66 @@ ctx.runOnUiThread(new java.lang.Runnable(){
 run: function(){
 if(GUI != null){
 GUI.dismiss();
+
+countdown--;
+var fws = Math.floor ((Math.random() * 10) + 1);
+{
+if(countdown==0&&fws==1)
+{
+clientMessage("<"+Player.getName(Player.getEntity)+"> can we go smoke a cigarette? I really need one... But first, LET ME TAKE A SELFIE");
+countdown = 500;
+}
+else if(countdown==0&&fws==2)
+{
+clientMessage("<"+Player.getName(Player.getEntity())+"> I only got 10 likes in the last 5 minutes. Do you think I should take it down? LET ME TAKE ANOTHER SELFIE");
+countdown = 500;
+}
+else if(countdown==0&&fws==3)
+{
+clientMessage("<"+Player.getName(Player.getEntity())+"> Wait, pause, Jason just liked my selfie. What a creep");
+countdown = 500;
+}
+else if(countdown==0&&fws==4)
+{
+clientMessage("<"+Player.getName(Player.getEntity())+"> LET ME TAKE A SELFIE");
+countdown = 500;
+}
+else if(countdown==0&&fws==5)
+{
+clientMessage("<"+Player.getName(Player.getEntity())+"> Let's go dance... There's no vodka at this table");
+countdown = 500;
+}
+else if(countdown==0&&fws==6)
+{
+clientMessage("<"+Player.getName(Player.getEntity())+"> That girl is such a fake model. She definitely bought all her Instagram followers");
+countdown = 500;
+}
+else if(countdown==0&&fws==7)
+{
+clientMessage("<"+Player.getName(Player.getEntity())+"> What should my caption be? I want it to be clever");
+countdown = 500;
+}
+else if(countdown==0&&fws==8)
+{
+clientMessage("<"+Player.getName(Player.getEntity())+"> OK, let's go take some shots");
+countdown = 500;
+}
+else if(countdown==0&&fws==9)
+{
+clientMessage("<"+Player.getName(Player.getEntity())+"> Oh my god, Jason just texted me. Should I go home with him? ");
+countdown = 500;
+}
+else if(countdown==0&&fws==10)
+{
+clientMessage("<"+Player.getName(Player.getEntity())+"> LET ME TAKE A SELFIE");
+countdown = 500;
+}
+}
+
 }
 }
 });
-}
+} 
 
 if(onrun==true){
 if(run==1){
@@ -1148,8 +1376,14 @@ return null;
 
 }
 
-
-
-
+function takeScreenshotRepeatedly(){
+if (shotsleft > 0) { 		
+ModPE.takeScreenshot("#Selfie"); 		
+shotsleft--;
+if(shotsleft>0){
+setTimeout(takeScreenshotRepeatedly, 10);
+}
+} 
+}
 
 
