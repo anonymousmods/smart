@@ -118,6 +118,7 @@ var sprintwid;
 var dnwid;
 var healwid; 
 var killwid;
+var selfieleft = 0;
 
 var GUI = new Widget.PopupWindow();
 
@@ -128,6 +129,8 @@ var layout = new LinearLayout(ctx);
 ModPE.setItem(511,"record_strad",0,"Phone");
 
 Item.addCraftRecipe(511, 1, 0, [265,2,0, 339,1,0, 331,5,0]);
+
+Item.setCategory(511, 2);
 
 function createModPEDir(){
 
@@ -177,8 +180,6 @@ clientMessage("You have 0 messages");
 
 if(Level.getGameMode()==1){
 
-}
-
 ctx.runOnUiThread(new Runnable(){
 run: function(){
 try{
@@ -188,6 +189,7 @@ print("Error: " + e);
 }
 }
 });
+}
 }
 
 function setTimeout(func, ticks) { 
@@ -396,6 +398,7 @@ dialog.dismiss();
 gps.setOnClickListener(new View.OnClickListener(){
 onClick: function(){
 dialog.dismiss();
+gpshow();
 }
 });
 
@@ -992,6 +995,7 @@ selfie.setOnClickListener(new View.OnClickListener(){
 onClick: function(){
 //takeselfie()
 clientMessage("Now click with the phone on the blocks in Third Person View to take selfies");
+selfieleft = 1;
 camdi.dismiss();
 }
 });
@@ -1037,10 +1041,11 @@ camdi.dismiss();
 }
 
 function useItem(x, y, z, itemId, blockId, side){
-if(itemId==511){
+if(itemId==511 && selfieleft==1){
 setRot(getPlayerEnt(), getYaw(getPlayerEnt())+170, getPitch(getPlayerEnt()));
 rotation = 1;
 shotsleft=3;
+selfieleft--;
 }               
 }
 
@@ -1385,5 +1390,6 @@ setTimeout(takeScreenshotRepeatedly, 10);
 }
 } 
 }
+
 
 
