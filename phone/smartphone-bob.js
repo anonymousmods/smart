@@ -1391,5 +1391,3 @@ setTimeout(takeScreenshotRepeatedly, 10);
 } 
 }
 
-
-
