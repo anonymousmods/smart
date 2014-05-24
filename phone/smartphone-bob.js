@@ -911,7 +911,7 @@ stdi.dismiss();
 });
 }
 
-heal.setOnClickListener(new View.OnClickListener(){
+heal.setOnClickListenersetOnClickListener(new View.OnClickListener(){
 onClick: function() {
 Player.setHealth(20);
 stdi.dismiss();
@@ -999,7 +999,7 @@ selfieleft = 1;
 camdi.dismiss();
 if(Level.getGameMode()==1){
 
-Entity.setCarriedItem(getPlayerEnt(), 510, 0, 0);
+Entity.setCarriedItem(getPlayerEnt(), 511, 0, 0);
 
 }
 }
