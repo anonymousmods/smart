@@ -997,6 +997,11 @@ onClick: function(){
 clientMessage("Now click with the phone on the blocks in Third Person View to take selfies");
 selfieleft = 1;
 camdi.dismiss();
+if(Level.getGameMode()==1){
+
+Entity.setCarriedItem(getPlayerEnt(), 510, 0, 0);
+
+}
 }
 });
 
